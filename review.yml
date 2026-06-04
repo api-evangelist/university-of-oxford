@@ -1,0 +1,40 @@
+name: University of Oxford
+description: University of Oxford public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 3
+    summary: >-
+      Oxford's historically notable Open Data Service (data.ox.ac.uk) and Mobile Oxford
+      platform — OxPoints linked data, places, courses, and vacancies via REST, SPARQL,
+      and a JavaScript API — are deprecated and no longer resolve (data.ox.ac.uk has no
+      A/AAAA record; docs.data.ox.ac.uk and api.m.ox.ac.uk are NXDOMAIN). The one clearly
+      live, documented public API is the Bodleian Libraries' ORA (Oxford University
+      Research Archive) OAI-PMH endpoint, verified returning HTTP 200 to an Identify
+      request. The ox-it and OxfordRSE GitHub organizations and the IT Services status
+      page are live. Cataloged ORA as the active public API; the legacy open-data stack
+      is documented here as decommissioned.
+    endpoints:
+      - url: https://ora.ox.ac.uk/api
+        status: 200
+        note: ORA API documentation — verified.
+      - url: https://ora.ox.ac.uk/oai2
+        status: 200
+        note: OAI-PMH 2.0 endpoint; Identify verb returned valid response.
+      - url: https://github.com/ox-it
+        status: 200
+        note: IT Services GitHub org (~298 repos).
+      - url: https://status.it.ox.ac.uk/
+        status: 200
+        note: Oxford IT Services status page.
+      - url: https://data.ox.ac.uk/
+        status: 0
+        note: Deprecated Open Data Service — domain present but no A/AAAA record; unreachable.
+      - url: https://api.m.ox.ac.uk/
+        status: 0
+        note: Mobile Oxford API — NXDOMAIN; decommissioned.
+      - url: https://docs.data.ox.ac.uk/
+        status: 0
+        note: OxPoints/REST/SPARQL docs — NXDOMAIN; decommissioned.

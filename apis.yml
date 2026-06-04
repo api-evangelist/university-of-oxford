@@ -1,0 +1,73 @@
+aid: university-of-oxford
+name: University of Oxford
+description: >-
+  The University of Oxford (Oxford, UK; QS World 2025 #3) is a collegiate
+  research university. Historically it ran a notable open-data and developer
+  program via the IT Services Open Data Service (data.ox.ac.uk) and the Mobile
+  Oxford platform, exposing OxPoints, places, courses, and vacancies via REST,
+  SPARQL, and a JavaScript API; that service is now deprecated and its
+  API/docs/mobile domains no longer resolve. The clearly live, documented
+  public API today is the Bodleian Libraries' ORA (Oxford University Research
+  Archive) OAI-PMH metadata interface.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Research
+  - United Kingdom
+  - Open Access
+  - OAI-PMH
+  - Repository
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: university-of-oxford:ora
+    name: ORA — Oxford University Research Archive API
+    description: >-
+      Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH v2.0)
+      endpoint for Oxford's institutional open-access repository (theses,
+      datasets, and journal articles). Supports verbs such as Identify,
+      ListSets, and ListMetadataFormats; metadata formats include oai_dc,
+      DataCite, OpenAIRE, RIOXX, and EThOS. Open for normal harvesting; large
+      downloads require contacting ORA first.
+    humanURL: https://ora.ox.ac.uk/api
+    baseURL: https://ora.ox.ac.uk/oai2
+    tags:
+      - Repository
+      - Open Access
+      - OAI-PMH
+      - Metadata
+      - Research Data
+    properties:
+      - type: Documentation
+        url: https://ora.ox.ac.uk/api
+      - type: Website
+        url: https://ora.ox.ac.uk/
+common:
+  - type: Website
+    url: https://www.ox.ac.uk/
+  - type: GitHub
+    url: https://github.com/ox-it
+  - type: GitHub
+    url: https://github.com/OxfordRSE
+  - type: Status
+    url: https://status.it.ox.ac.uk/
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/university-of-oxford/
+  - type: Plans
+    url: plans/university-of-oxford-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/university-of-oxford-rate-limits.yml
+  - type: FinOps
+    url: finops/university-of-oxford-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
