@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "oai": "http://www.openarchives.org/OAI/2.0/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "@vocab": "https://ora.ox.ac.uk/ns#",
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+    "identifier": "schema:identifier",
+    "University": {
+      "@id": "schema:CollegeOrUniversity"
+    },
+    "ora": {
+      "@id": "@vocab:ResearchArchive",
+      "@type": "schema:ArchiveOrganization"
+    },
+    "baseURL": {
+      "@id": "oai:baseURL",
+      "@type": "schema:URL"
+    },
+    "repositoryName": "oai:repositoryName",
+    "protocolVersion": "oai:protocolVersion",
+    "metadataFormat": "oai:metadataPrefix",
+    "set": "oai:setSpec",
+    "record": {
+      "@id": "@vocab:Record",
+      "@type": "schema:CreativeWork"
+    },
+    "title": "dc:title",
+    "creator": "dc:creator",
+    "subject": "dc:subject",
+    "type": "dc:type",
+    "date": {
+      "@id": "dc:date",
+      "@type": "schema:Date"
+    },
+    "publisher": "dc:publisher",
+    "rights": "dc:rights"
+  },
+  "@type": "CollegeOrUniversity",
+  "name": "University of Oxford",
+  "url": "https://www.ox.ac.uk/"
+}

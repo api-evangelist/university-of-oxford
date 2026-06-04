@@ -68,6 +68,10 @@ common:
     url: finops/university-of-oxford-finops.yml
   - type: Review
     url: review.yml
+  - type: JSONLD
+    url: json-ld/university-of-oxford-context.jsonld
+  - type: Blog
+    url: blogs/blogs.json
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

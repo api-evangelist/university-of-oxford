@@ -1,0 +1,14 @@
+{
+  "repo": "university-of-oxford",
+  "feeds": [
+    {
+      "source": "https://ora.ox.ac.uk/",
+      "feed_url": "https://ora.ox.ac.uk/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-03T00:00:00Z"
+}
