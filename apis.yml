@@ -50,6 +50,8 @@ apis:
       - type: Website
         url: https://ora.ox.ac.uk/
 common:
+  - type: DomainSecurity
+    url: security/university-of-oxford-domain-security.yml
   - type: Website
     url: https://www.ox.ac.uk/
   - type: GitHub
