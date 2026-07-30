@@ -10,9 +10,21 @@ description: >-
   public API today is the Bodleian Libraries' ORA (Oxford University Research
   Archive) OAI-PMH metadata interface.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-oxford.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/apis.yml
 tags:
   - Education
