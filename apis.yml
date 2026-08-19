@@ -37,7 +37,7 @@ tags:
   - Repository
 created: '2026-06-03'
 modified: '2026-06-03'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: university-of-oxford:ora
     name: ORA — Oxford University Research Archive API
