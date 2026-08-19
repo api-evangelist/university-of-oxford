@@ -1,90 +1,482 @@
 aid: university-of-oxford
 name: University of Oxford
 description: >-
-  The University of Oxford (Oxford, UK; QS World 2025 #3) is a collegiate
-  research university. Historically it ran a notable open-data and developer
-  program via the IT Services Open Data Service (data.ox.ac.uk) and the Mobile
-  Oxford platform, exposing OxPoints, places, courses, and vacancies via REST,
-  SPARQL, and a JavaScript API; that service is now deprecated and its
-  API/docs/mobile domains no longer resolve. The clearly live, documented
-  public API today is the Bodleian Libraries' ORA (Oxford University Research
-  Archive) OAI-PMH metadata interface.
+  The University of Oxford is a collegiate public research university in Oxford, United
+  Kingdom, and a Russell Group member. It operates no central developer programme, no API
+  portal, no developer account and no authenticated API of any kind — and the one it used to
+  run, the Open Data Service at data.ox.ac.uk with OxPoints linked data, places, courses and
+  vacancies over REST and SPARQL, was decommissioned without a successor; that domain and the
+  Mobile Oxford API host no longer resolve. What Oxford does operate, entirely inside its
+  library and research-infrastructure estate, is more substantial than that absence suggests:
+  the Bodleian Libraries run a conformant IIIF stack at iiif.bodleian.ox.ac.uk (Image API 2.1
+  level 2, Presentation API 2.1 and a Change Discovery 1.0 activity stream over 21,843 items),
+  two independent OAI-PMH data providers (ORA and the Oxford Text Archive), an undocumented but
+  live JSON search API over the institutional repository, and a Shibboleth identity provider
+  registered in the UK Access Management Federation and eduGAIN alongside 35 federated service
+  providers across central IT, departments and colleges. Four of the twelve education-regime
+  domain standards are evidenced directly in what those endpoints return: OAI-PMH, DataCite,
+  ORCID and SAML/Shibboleth. Set against that, four significant surfaces carrying Oxford's name
+  are vendor contracts running under a tenancy and are recorded here as such rather than
+  credited to the University: the Sustainable Digital Scholarship research data portal at
+  portal.sds.ox.ac.uk is Figshare, SOLO is Ex Libris Primo VE, the VLE is Instructure Canvas,
+  and recruitment is CoreHR. Nothing Oxford operates is documented with a machine-readable
+  contract; every OpenAPI and schema in this repository was derived by API Evangelist from live
+  responses and is marked as such.
 type: Index
+x-type: university
+x-category: Public Research University
 accessModel:
   pricing: free
-  onboarding: unknown
+  onboarding: none
   trial: false
   try_now: false
-  public: false
+  public: true
   label: Free
-  confidence: medium
+  confidence: high
   source:
-  - plans
-  generated: '2026-07-22'
-  method: derived
+    - plans
+    - probed
+  generated: '2026-08-19'
+  method: probed
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-oxford.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/apis.yml
 tags:
-  - Education
-  - Higher Education
   - University
+  - Higher Education
+  - Education
   - Research
   - United Kingdom
-  - Open Access
+  - Russell Group
+  - Research Repository
+  - Library
+  - Digital Collections
+  - IIIF
   - OAI-PMH
-  - Repository
+  - Identity Federation
+  - Open Access
+  - Research Computing
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-08-19'
 specificationVersion: '0.23'
+x-coverage:
+  state: covered
+  reason: institution_operated_surfaces_verified
+  detail: >-
+    Every surface in this profile was probed live on 2026-08-19 and its operator settled before
+    anything was saved. Six institution-operated surfaces were confirmed on University of
+    Oxford registrable domains and four vendor tenancies were identified and recorded as
+    relationships rather than as Oxford's contracts. Oxford publishes no machine-readable API
+    contract anywhere, so the four OpenAPI documents and three JSON Schemas in this repository
+    are DERIVED from live responses and marked method: derived; the payloads they were derived
+    from are stored verbatim in examples/. Two limits on this coverage are worth stating. First,
+    the entire www.ox.ac.uk web estate sits behind a Cloudflare managed challenge and returns
+    403 with cf-mitigated: challenge to every non-browser client, including
+    /.well-known/security.txt — those hosts are LIVE and bot-mitigated, not dead, and any
+    surface documented only in prose on that estate could not be machine-read. Second,
+    portal.sds.ox.ac.uk and the Figshare platform behind it return an AWS WAF challenge, so the
+    tenancy was settled by DNS (CNAME to proxy-eu-01.figshare.com) and by the DataCite registry
+    (client figshare.oxford, 155,787 DOIs resolving to portal.sds.ox.ac.uk) rather than by
+    reading the portal itself. A third limit is about our tooling rather than about Oxford, and
+    is recorded so it is not rediscovered the hard way: audit-university-contracts.py classifies
+    by registrable domain, so it reads portal.sds.ox.ac.uk, canvas.ox.ac.uk and
+    www.recruit.ox.ac.uk as institution-operated. All three are vendor tenancies behind vanity
+    hostnames, and because a vanity hostname is unique to one institution it can never trip the
+    script's cohort-shared-host test for `vendor` either. Three of Oxford's four tenancies sit in
+    that blind spot; only SOLO, which points at oxford.primo.exlibrisgroup.com, is caught. The
+    x-operator values in this file were settled by DNS resolution and are authoritative over the
+    script's hostname heuristic.
+  evidence:
+    - url: https://ora.ox.ac.uk/oai2?verb=Identify
+      status: 200
+    - url: https://ora.ox.ac.uk/objects.json?q=climate
+      status: 200
+    - url: https://iiif.bodleian.ox.ac.uk/
+      status: 200
+    - url: https://iiif.bodleian.ox.ac.uk/iiif/activity/all-changes
+      status: 200
+    - url: https://ota.bodleian.ox.ac.uk/repository/oai/request?verb=Identify
+      status: 200
+    - url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+      status: 200
+    - url: https://lifelong-learning.ox.ac.uk/wp-json/wp/v2/
+      status: 200
+    - url: https://www.ox.ac.uk/
+      status: 403
+      note: Cloudflare managed challenge, cf-mitigated:challenge — live, not dead.
+    - url: https://ora.ox.ac.uk/objects/opensearch.xml
+      status: 403
+      note: Cloudflare managed challenge on an OpenSearch descriptor Oxford links from its own API page.
+    - url: https://portal.sds.ox.ac.uk/
+      status: 202
+      note: AWS WAF challenge (x-amzn-waf-action:challenge) on the Figshare tenancy.
+    - url: https://data.ox.ac.uk/
+      status: 0
+      note: Decommissioned Open Data Service — no A/AAAA record.
+    - url: https://api.m.ox.ac.uk/
+      status: 0
+      note: Decommissioned Mobile Oxford API — NXDOMAIN.
 apis:
-  - aid: university-of-oxford:ora
-    name: ORA — Oxford University Research Archive API
+  - aid: university-of-oxford:ora-oai-pmh
+    name: ORA — Oxford University Research Archive OAI-PMH
+    x-operator: institution
+    x-operator-evidence: >-
+      Identify reports repositoryIdentifier ora.ox.ac.uk, origin baseURL
+      ora4-rhel9-prd-public2.bodleian.ox.ac.uk and adminEmail ora-dev@bodleian.ox.ac.uk — all
+      Bodleian Libraries / University of Oxford infrastructure.
     description: >-
-      Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH v2.0)
-      endpoint for Oxford's institutional open-access repository (theses,
-      datasets, and journal articles). Supports verbs such as Identify,
-      ListSets, and ListMetadataFormats; metadata formats include oai_dc,
-      DataCite, OpenAIRE, RIOXX, and EThOS. Open for normal harvesting; large
-      downloads require contacting ORA first.
+      The only API surface Oxford actually documents. An OAI-PMH 2.0 data provider over the
+      institutional open-access repository, serving ten metadata formats including DataCite
+      kernel 4.6, OpenAIRE 4.0, three RIOXX profiles (one released under CC0), EThOS uketd_dc,
+      and customised profiles for Oxford's own SOLO discovery layer, BASE and Unpaywall.
+      Sixteen sets allow selective harvesting by type of work. Oxford publishes harvesting
+      etiquette, an identifier migration rule for the 2018 platform change, an update schedule,
+      a deletion policy and a Tuesday 07:00-09:00 UK maintenance window. Selective harvesting
+      by publication date is explicitly not supported.
     humanURL: https://ora.ox.ac.uk/api
     baseURL: https://ora.ox.ac.uk/oai2
     tags:
-      - Repository
-      - Open Access
       - OAI-PMH
+      - Research Repository
+      - Open Access
       - Metadata
-      - Research Data
     properties:
+      - type: OpenAPI
+        url: openapi/university-of-oxford-ora-oai-pmh-openapi.yml
       - type: Documentation
         url: https://ora.ox.ac.uk/api
+      - type: TermsOfService
+        url: https://ora.ox.ac.uk/terms_of_use
+  - aid: university-of-oxford:ora-search
+    name: ORA — Research Archive Search & Record API
+    x-operator: institution
+    x-operator-evidence: >-
+      ora.ox.ac.uk is a University of Oxford registrable domain; the application is Oxford's own
+      Blacklight front end, whose source is referenced from Oxford's API page at
+      gitlab.bodleian.ox.ac.uk/ORA4/blacklight.publicfrontend.
+    description: >-
+      An undocumented but live JSON search and record API over ORA. GET /objects.json returns a
+      paged, faceted, JSON:API-shaped result set; GET /objects/{uuid}.json returns a single
+      record. The endpoint is self-describing — every response carries the service's own
+      vocabulary of four search fields, four sort orders and sixteen facet fields, including
+      division, department, college, research group and funder. Oxford has never announced,
+      versioned or committed to this surface; it is recorded here because it answers, and it is
+      described in a DERIVED contract that says so.
+    humanURL: https://ora.ox.ac.uk/
+    baseURL: https://ora.ox.ac.uk
+    tags:
+      - Research Repository
+      - Search
+      - Open Access
+    properties:
+      - type: OpenAPI
+        url: openapi/university-of-oxford-ora-search-openapi.yml
+      - type: JSONSchema
+        url: json-schema/university-of-oxford-ora-search-response-schema.json
+      - type: JSONSchema
+        url: json-schema/university-of-oxford-ora-object-schema.json
       - type: Website
         url: https://ora.ox.ac.uk/
+  - aid: university-of-oxford:bodleian-iiif
+    name: Digital Bodleian IIIF API
+    x-operator: institution
+    x-operator-evidence: >-
+      iiif.bodleian.ox.ac.uk CNAMEs to digital92-prd-public.bodleian.ox.ac.uk at 129.67.247.151,
+      University of Oxford address space. No vendor platform, host or account is involved.
+    description: >-
+      The strongest institution-operated API surface Oxford runs, and the one entirely absent
+      from this profile before 2026-08-19. Three conformant IIIF specifications on Oxford's own
+      infrastructure: Image API 2.1 at level 2 (jpg/png/tif/webp/avif, four qualities, nine
+      supported features, maxWidth and maxHeight 4000, plus a physical-dimensions annex
+      service), Presentation API 2.1 manifests for every Digital Bodleian object with per-object
+      rights that vary by holding college, and Change Discovery API 1.0 — an OrderedCollection
+      activity stream of 21,843 items across 219 pages that gives harvesters a real incremental
+      sync path. The service root is itself machine-readable and lists its own collections and
+      streams.
+    humanURL: https://digital.bodleian.ox.ac.uk/faq/
+    baseURL: https://iiif.bodleian.ox.ac.uk
+    tags:
+      - IIIF
+      - Digital Collections
+      - Library
+      - Images
+      - Change Discovery
+    properties:
+      - type: OpenAPI
+        url: openapi/university-of-oxford-bodleian-iiif-openapi.yml
+      - type: JSONSchema
+        url: json-schema/university-of-oxford-bodleian-iiif-image-info-schema.json
+      - type: Documentation
+        url: https://digital.bodleian.ox.ac.uk/faq/
+      - type: TermsOfService
+        url: https://digital.bodleian.ox.ac.uk/terms/
+      - type: Website
+        url: https://digital.bodleian.ox.ac.uk/
+  - aid: university-of-oxford:oxford-text-archive-oai-pmh
+    name: Oxford Text Archive OAI-PMH
+    x-operator: institution
+    x-operator-evidence: >-
+      Identify reports repositoryIdentifier ota.bodleian.ox.ac.uk, adminEmail
+      ota@bodleian.ox.ac.uk and an OLAC institution of "Bodleian Libraries, University of
+      Oxford". DSpace is self-hosted open-source software, not a vendor tenancy.
+    description: >-
+      A second, independent OAI-PMH data provider, separate from ORA — the Bodleian Libraries'
+      language-resources repository, running on a self-hosted DSpace installation with an OLAC
+      archive description. Showing its age: earliest datestamp 2019, an OLAC record last
+      reviewed 2020-02-26, and an unresolved software template variable in the OLAC access
+      field. Deleted records are transient here, unlike ORA where they are not tracked at all.
+    humanURL: https://ota.bodleian.ox.ac.uk/repository/xmlui/page/about
+    baseURL: https://ota.bodleian.ox.ac.uk/repository/oai/request
+    tags:
+      - OAI-PMH
+      - Research Repository
+      - Language Resources
+    properties:
+      - type: OpenAPI
+        url: openapi/university-of-oxford-oxford-text-archive-oai-pmh-openapi.yml
+      - type: Website
+        url: https://ota.bodleian.ox.ac.uk/repository/xmlui/
+  - aid: university-of-oxford:shibboleth-idp
+    name: University of Oxford Shibboleth Identity Provider
+    x-operator: institution
+    x-operator-evidence: >-
+      Registered in eduGAIN as https://registry.shibboleth.ox.ac.uk/idp, IDPSSODescriptor,
+      display name "University of Oxford", registration authority http://ukfederation.org.uk.
+      An identity provider is institution-operated by definition — it asserts the institution's
+      own identities.
+    description: >-
+      A SAML 2.0 identity provider serving live machine-readable metadata, with Redirect/SSO,
+      POST/SSO, POST-SimpleSign/SSO, POST/SLO and SOAP/Redirect/SLO bindings and a signing
+      certificate rotated 2026-05-15. Oxford is registered in the UK Access Management
+      Federation and eduGAIN with one production and two test identity providers, plus 35
+      service providers spanning central IT, departments and colleges — All Souls, Worcester,
+      Lincoln, Keble, St Hilda's, Brasenose, Exeter, St John's, Continuing Education, NDORMS,
+      Structural Biology, Statistics and the Text Archive among them. Caveat recorded rather
+      than hidden: the document served at the metadata URL is the Shibboleth software's
+      built-in self-description and still carries the product's default placeholder display
+      name and an internal node entityID; the federation registration, not that document, is
+      the authoritative identity.
+    humanURL: https://technical.edugain.org/entities
+    baseURL: https://idp.shibboleth.ox.ac.uk/idp
+    tags:
+      - Identity Federation
+      - SAML
+      - Shibboleth
+      - eduGAIN
+    properties:
+      - type: Metadata
+        url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+      - type: Conformance
+        url: conformance/university-of-oxford-domain-standards.yml
+  - aid: university-of-oxford:conted-wp-rest
+    name: Oxford Continuing Education WordPress REST API
+    x-operator: institution
+    x-operator-evidence: >-
+      lifelong-learning.ox.ac.uk is a University of Oxford registrable domain, operated by the
+      Department for Continuing Education. WordPress is self-hosted open-source software.
+    description: >-
+      The public WordPress REST API of Oxford's Department for Continuing Education, live and
+      anonymous on the read paths. Recorded honestly for what it is: a content-management
+      platform default, not a designed institutional API, and not a course-catalog contract. It
+      is included because it is a real, live, machine-readable surface on an Oxford-owned
+      domain and this profile does not pad or hide either way.
+    humanURL: https://lifelong-learning.ox.ac.uk/
+    baseURL: https://lifelong-learning.ox.ac.uk/wp-json
+    tags:
+      - Content
+      - Continuing Education
+      - WordPress
+    properties:
+      - type: APIReference
+        url: https://lifelong-learning.ox.ac.uk/wp-json/wp/v2/
+      - type: Website
+        url: https://lifelong-learning.ox.ac.uk/
+  - aid: university-of-oxford:sds-figshare-tenancy
+    name: Sustainable Digital Scholarship research data portal (Figshare tenancy)
+    x-operator: tenant
+    x-operator-evidence: >-
+      portal.sds.ox.ac.uk CNAMEs to proxy-eu-01.figshare.com. The DataCite repository client
+      figshare.oxford, name "University of Oxford", has minted 155,787 DOIs under the
+      10.25446/oxford prefix, and those DOIs resolve to portal.sds.ox.ac.uk article pages.
+    description: >-
+      Oxford's research data portal runs on Figshare under an Oxford-owned hostname. The data,
+      the DOI prefix and the collection are Oxford's; the contract, the API and the engineering
+      are Figshare's. No Figshare specification is stored in this repository — that is exactly
+      the misattribution this cohort was re-profiled to remove — and the relationship is
+      recorded here instead, which is the correct place for it. Note also a false lead worth
+      leaving on the record: oxford.figshare.com appears to resolve, but *.figshare.com is a
+      wildcard and a deliberately nonsensical subdomain returns the identical AWS WAF challenge,
+      so that host is NOT evidence of anything. The tenancy is at portal.sds.ox.ac.uk.
+    humanURL: https://portal.sds.ox.ac.uk/
+    baseURL: https://portal.sds.ox.ac.uk/api
+    tags:
+      - Research Data
+      - Research Repository
+      - Tenant
+      - Figshare
+    properties:
+      - type: Website
+        url: https://portal.sds.ox.ac.uk/
+      - type: Vendor
+        url: https://figshare.com/
+  - aid: university-of-oxford:solo-primo-tenancy
+    name: SOLO library discovery (Ex Libris Primo VE tenancy)
+    x-operator: tenant
+    x-operator-evidence: >-
+      solo.bodleian.ox.ac.uk CNAMEs to oxford.primo.exlibrisgroup.com and redirects to a Primo
+      VE discovery view with the institution code vid=44OXF_INST:SOLO.
+    description: >-
+      The Bodleian Libraries' discovery layer is Ex Libris Primo VE. Any Primo or Alma REST API
+      reachable under this tenancy is Ex Libris's contract governing Oxford's holdings, not an
+      Oxford API. Recorded as a relationship; no Ex Libris specification is stored here.
+    humanURL: https://solo.bodleian.ox.ac.uk/
+    baseURL: https://oxford.primo.exlibrisgroup.com
+    tags:
+      - Library
+      - Discovery
+      - Tenant
+      - Ex Libris
+    properties:
+      - type: Website
+        url: https://solo.bodleian.ox.ac.uk/
+      - type: Vendor
+        url: https://developers.exlibrisgroup.com/
+  - aid: university-of-oxford:canvas-tenancy
+    name: Oxford Canvas VLE (Instructure tenancy)
+    x-operator: tenant
+    x-operator-evidence: >-
+      canvas.ox.ac.uk CNAMEs to universityofoxford-vanity.instructure.com.
+    description: >-
+      Oxford's virtual learning environment, replacing the retired WebLearn Sakai service. The
+      Canvas LMS REST API and Canvas's LTI and Caliper conformance belong to Instructure.
+      The Canvas REST API is live under Oxford's hostname and returns 401 unauthenticated, and
+      Instructure's own API reference is served at canvas.ox.ac.uk/doc/api/ — an Oxford host
+      serving a vendor's contract, which is the tenant case in miniature. Recorded as a
+      relationship precisely so that Instructure's LTI certification is never
+      counted as an Oxford domain-standard conformance — see the not-claimed section of
+      conformance/university-of-oxford-domain-standards.yml.
+    humanURL: https://canvas.ox.ac.uk/doc/api/
+    baseURL: https://canvas.ox.ac.uk/api/v1/accounts
+    tags:
+      - Learning Management
+      - Tenant
+      - Canvas
+    properties:
+      - type: APIReference
+        url: https://canvas.ox.ac.uk/doc/api/
+      - type: Website
+        url: https://canvas.ox.ac.uk/
+      - type: Vendor
+        url: https://www.instructure.com/
+  - aid: university-of-oxford:recruit-corehr-tenancy
+    name: Oxford recruitment (CoreHR tenancy)
+    x-operator: tenant
+    x-operator-evidence: >-
+      www.recruit.ox.ac.uk redirects to
+      my.corehr.com/pls/uoxrecruit/erq_search_package.search_form?p_company=10 — a CoreHR-hosted
+      application under an Oxford-specific path, not an Oxford host.
+    description: >-
+      Vacancies were once part of Oxford's own open-data programme; they are now a CoreHR
+      application reached through an Oxford vanity hostname. The redirect target leaves the
+      ox.ac.uk domain entirely, which makes this the weakest of Oxford's four tenancies —
+      Oxford does not even own the host the user lands on. There is no callable API here at
+      all: my.corehr.com/pls/uoxrecruit is a server-side web form that 403s any client arriving
+      without the redirect from recruit.ox.ac.uk, so no API base URL is claimed for it.
+    humanURL: https://www.recruit.ox.ac.uk/
+    baseURL: https://www.recruit.ox.ac.uk/
+    tags:
+      - Human Resources
+      - Recruitment
+      - Tenant
+      - CoreHR
+    properties:
+      - type: Website
+        url: https://www.recruit.ox.ac.uk/
 common:
-  - type: DomainSecurity
-    url: security/university-of-oxford-domain-security.yml
   - type: Website
     url: https://www.ox.ac.uk/
-  - type: GitHub
+  - type: Documentation
+    url: https://ora.ox.ac.uk/api
+  - type: APIReference
+    url: https://iiif.bodleian.ox.ac.uk/
+  - type: ResearchRepository
+    url: https://ora.ox.ac.uk/
+  - type: LibraryCatalog
+    url: https://solo.bodleian.ox.ac.uk/
+  - type: IdentityFederation
+    url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+  - type: ResearchComputing
+    url: https://arc-user-guide.readthedocs.io/en/latest/
+  - type: CourseCatalog
+    url: https://lifelong-learning.ox.ac.uk/
+  - type: OpenData
+    url: https://data.mrc.ox.ac.uk/
+  - type: AIPolicy
+    url: https://libguides.bodleian.ox.ac.uk/using-ai-to-support-academic-work/university-policies
+  - type: AITooling
+    url: https://libguides.bodleian.ox.ac.uk/using-ai-to-support-academic-work
+  - type: GitHubOrganization
     url: https://github.com/ox-it
   - type: GitHub
     url: https://github.com/OxfordRSE
   - type: Status
     url: https://status.it.ox.ac.uk/
+  - type: Support
+    url: https://ora.ox.ac.uk/contact
+  - type: TermsOfService
+    url: https://ora.ox.ac.uk/terms_of_use
+  - type: PrivacyPolicy
+    url: https://glam.web.ox.ac.uk/privacy-policy-ora
+  - type: Policies
+    url: https://ora.ox.ac.uk/policies
   - type: LinkedIn
     url: https://www.linkedin.com/school/university-of-oxford/
+  - type: Blog
+    url: https://blog.oxrse.uk/
+  - type: OpenAPI
+    url: openapi/university-of-oxford-ora-search-openapi.yml
+  - type: OpenAPI
+    url: openapi/university-of-oxford-ora-oai-pmh-openapi.yml
+  - type: OpenAPI
+    url: openapi/university-of-oxford-bodleian-iiif-openapi.yml
+  - type: OpenAPI
+    url: openapi/university-of-oxford-oxford-text-archive-oai-pmh-openapi.yml
+  - type: JSONSchema
+    url: json-schema/university-of-oxford-ora-search-response-schema.json
+  - type: JSONSchema
+    url: json-schema/university-of-oxford-ora-object-schema.json
+  - type: JSONSchema
+    url: json-schema/university-of-oxford-bodleian-iiif-image-info-schema.json
+  - type: Examples
+    url: examples/index.yml
+  - type: Rules
+    url: rules/university-of-oxford-rules.yml
+  - type: Vocabulary
+    url: vocabulary/university-of-oxford-vocabulary.yml
+  - type: Authentication
+    url: authentication/university-of-oxford-authentication.yml
+  - type: Scopes
+    url: scopes/university-of-oxford-scopes.yml
+  - type: Errors
+    url: errors/university-of-oxford-errors.yml
+  - type: Conformance
+    url: conformance/university-of-oxford-domain-standards.yml
+  - type: Lifecycle
+    url: lifecycle/university-of-oxford-lifecycle.yml
+  - type: DomainSecurity
+    url: security/university-of-oxford-domain-security.yml
   - type: Plans
     url: plans/university-of-oxford-plans-pricing.yml
   - type: RateLimits
     url: rate-limits/university-of-oxford-rate-limits.yml
   - type: FinOps
     url: finops/university-of-oxford-finops.yml
-  - type: Review
-    url: review.yml
   - type: JSONLD
     url: json-ld/university-of-oxford-context.jsonld
-  - type: Blog
+  - type: Review
+    url: review.yml
+  - type: Blogs
     url: blogs/blogs.json
 maintainers:
   - FN: Kin Lane
