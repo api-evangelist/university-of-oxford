@@ -200,6 +200,12 @@ apis:
       - IIIF
       - Digital Collections
       - Library
+      - Image
+      - Change Discovery
+    tags_raw:
+      - IIIF
+      - Digital Collections
+      - Library
       - Images
       - Change Discovery
     properties:
@@ -386,6 +392,11 @@ apis:
     humanURL: https://www.recruit.ox.ac.uk/
     baseURL: https://www.recruit.ox.ac.uk/
     tags:
+      - Human Resources
+      - Recruitment
+      - Tenant
+      - Core HR
+    tags_raw:
       - Human Resources
       - Recruitment
       - Tenant
