@@ -1,0 +1,65 @@
+name: University of Oxford — authentication posture
+description: >-
+  Every institution-operated API surface found at Oxford is unauthenticated and read-only.
+  Authentication at Oxford exists, and is substantial, but it sits on the identity-federation
+  side of the house rather than in front of any public API: there is no API key, no OAuth
+  client registration, no developer account and no token endpoint anywhere in the estate.
+generated: '2026-08-19'
+method: probed
+source: live unauthenticated HTTP probes of every surface listed in apis.yml
+surfaces:
+  - api: ORA OAI-PMH
+    url: https://ora.ox.ac.uk/oai2
+    x-operator: institution
+    scheme: none
+    detail: >-
+      Fully open to unauthenticated harvesting. Oxford states in its own guidance that large or
+      bulk harvesters should contact the service first — a social control, not a technical one,
+      and it is not enforced by credentials.
+  - api: ORA search / object JSON
+    url: https://ora.ox.ac.uk/objects.json
+    x-operator: institution
+    scheme: none
+    detail: >-
+      No authentication. Cloudflare fronts the host and issues a managed challenge on some
+      paths (a 403 with cf-mitigated: challenge on /objects/opensearch.xml), which is bot
+      mitigation rather than an access-control scheme.
+  - api: Digital Bodleian IIIF
+    url: https://iiif.bodleian.ox.ac.uk
+    x-operator: institution
+    scheme: none
+    detail: >-
+      Open. IIIF defines an Authentication API; this deployment does not use it, and no auth
+      services are advertised on the info.json or manifest documents.
+  - api: Oxford Text Archive OAI-PMH
+    url: https://ota.bodleian.ox.ac.uk/repository/oai/request
+    x-operator: institution
+    scheme: none
+  - api: Continuing Education WordPress REST
+    url: https://lifelong-learning.ox.ac.uk/wp-json/
+    x-operator: institution
+    scheme: none
+    detail: >-
+      Read paths are anonymous. WordPress write endpoints exist in the route table but require
+      cookie or application-password auth that is not offered to the public.
+federated-identity:
+  detail: >-
+    Where Oxford does authenticate, it does so through SAML 2.0 rather than through anything an
+    API client can obtain. The University operates a Shibboleth Identity Provider registered in
+    the UK Access Management Federation and eduGAIN as
+    https://registry.shibboleth.ox.ac.uk/idp, plus two test IdPs, and 35 registered service
+    providers across central IT, departments and colleges. That is a real, machine-readable,
+    institution-operated authentication surface — it is simply not an API authorization scheme,
+    and it is recorded here so the absence above is not misread as an absence of identity
+    infrastructure.
+  evidence:
+    - url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+      status: 200
+    - url: https://technical.edugain.org/api.php?action=list_entities&format=json
+      status: 200
+gaps:
+  - No developer account, API key issuance or client registration anywhere in the estate.
+  - No OAuth 2.0 or OpenID Connect endpoint on any institution-operated host.
+  - >-
+    No documented authentication for the ORA JSON endpoints because those endpoints are not
+    documented at all — see openapi/university-of-oxford-ora-search-openapi.yml.

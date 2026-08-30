@@ -1,0 +1,856 @@
+{
+  "links": {
+    "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate",
+    "next": "https://ora.ox.ac.uk/objects.json?page=2&per_page=3&q=climate",
+    "last": "https://ora.ox.ac.uk/objects.json?page=2192&per_page=3&q=climate"
+  },
+  "meta": {
+    "pages": {
+      "current_page": 1,
+      "next_page": 2,
+      "prev_page": null,
+      "total_pages": 2192,
+      "limit_value": 3,
+      "offset_value": 0,
+      "total_count": 6574,
+      "first_page?": true,
+      "last_page?": false
+    }
+  },
+  "data": [
+    {
+      "id": "uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b",
+      "type": null,
+      "attributes": {
+        "title": "Climate Change Scenarios for the United Kingdom - Technical Report No 1",
+        "alternative_title": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b#alternative_title",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "Summary Report "
+            ],
+            "label": "Alternative title"
+          }
+        },
+        "index_authors": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b#index_authors",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "Hulme, M, Jenkins, G"
+            ],
+            "label": "Author"
+          }
+        },
+        "citation_publication_date": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b#citation_publication_date",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "1998-01-01"
+            ],
+            "label": "Publication date"
+          }
+        }
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b"
+      }
+    },
+    {
+      "id": "uuid:3f623d24-346f-4c48-a88e-301f1c951b55",
+      "type": null,
+      "attributes": {
+        "title": "Geographies of climate change belief",
+        "index_authors": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:3f623d24-346f-4c48-a88e-301f1c951b55#index_authors",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "Hopkins, DM, Markowitz, EM"
+            ],
+            "label": "Author"
+          }
+        },
+        "citation_publication_date": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:3f623d24-346f-4c48-a88e-301f1c951b55#citation_publication_date",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "2018-04-05"
+            ],
+            "label": "Publication date"
+          }
+        }
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/uuid:3f623d24-346f-4c48-a88e-301f1c951b55"
+      }
+    },
+    {
+      "id": "uuid:56113cc2-0ce2-4d65-8a46-b70da6c8dd11",
+      "type": null,
+      "attributes": {
+        "title": "Methods of attributing human mobility to climate change: evidence from East Africa",
+        "index_authors": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:56113cc2-0ce2-4d65-8a46-b70da6c8dd11#index_authors",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              "Thalheimer, L"
+            ],
+            "label": "Author"
+          }
+        },
+        "rights_copyright_date": {
+          "id": "https://ora.ox.ac.uk/objects/uuid:56113cc2-0ce2-4d65-8a46-b70da6c8dd11#rights_copyright_date",
+          "type": "document_value",
+          "attributes": {
+            "value": [
+              2021
+            ],
+            "label": "Copyright date"
+          }
+        }
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/uuid:56113cc2-0ce2-4d65-8a46-b70da6c8dd11"
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "facet",
+      "id": "f_type_of_work",
+      "attributes": {
+        "label": "Item Type",
+        "items": [
+          {
+            "attributes": {
+              "label": "Journal article",
+              "value": "Journal article",
+              "hits": 5143
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_type_of_work%5D%5B%5D=Journal+article&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Thesis",
+              "value": "Thesis",
+              "hits": 701
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_type_of_work%5D%5B%5D=Thesis&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Working paper",
+              "value": "Working paper",
+              "hits": 212
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_type_of_work%5D%5B%5D=Working+paper&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_type_of_work.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "computed__contains_full_text",
+      "attributes": {
+        "label": "File Availability",
+        "items": [
+          {
+            "attributes": {
+              "label": "true",
+              "value": "true",
+              "hits": 5024
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bcomputed__contains_full_text%5D%5B%5D=true&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "false",
+              "value": "false",
+              "hits": 1550
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bcomputed__contains_full_text%5D%5B%5D=false&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/computed__contains_full_text.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_contributors__division",
+      "attributes": {
+        "label": "Division",
+        "items": [
+          {
+            "attributes": {
+              "label": "MPLS",
+              "value": "MPLS",
+              "hits": 2491
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__division%5D%5B%5D=MPLS&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "SSD",
+              "value": "SSD",
+              "hits": 2165
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__division%5D%5B%5D=SSD&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "MSD",
+              "value": "MSD",
+              "hits": 351
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__division%5D%5B%5D=MSD&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_contributors__division.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_contributors__department",
+      "attributes": {
+        "label": "Department",
+        "items": [
+          {
+            "attributes": {
+              "label": "SOGE",
+              "value": "SOGE",
+              "hits": 1537
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__department%5D%5B%5D=SOGE&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Physics",
+              "value": "Physics",
+              "hits": 980
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__department%5D%5B%5D=Physics&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Earth Sciences",
+              "value": "Earth Sciences",
+              "hits": 497
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__department%5D%5B%5D=Earth+Sciences&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_contributors__department.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_contributors__college",
+      "attributes": {
+        "label": "College",
+        "items": [
+          {
+            "attributes": {
+              "label": "Oriel College",
+              "value": "Oriel College",
+              "hits": 150
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__college%5D%5B%5D=Oriel+College&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "St Cross College",
+              "value": "St Cross College",
+              "hits": 119
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__college%5D%5B%5D=St+Cross+College&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Linacre College",
+              "value": "Linacre College",
+              "hits": 114
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__college%5D%5B%5D=Linacre+College&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_contributors__college.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_contributors__research_group",
+      "attributes": {
+        "label": "Research Group",
+        "items": [
+          {
+            "attributes": {
+              "label": "Oxford Institute for Energy Studies",
+              "value": "Oxford Institute for Energy Studies",
+              "hits": 55
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__research_group%5D%5B%5D=Oxford+Institute+for+Energy+Studies&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "REACH Water Security",
+              "value": "REACH Water Security",
+              "hits": 24
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__research_group%5D%5B%5D=REACH+Water+Security&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "UKCIP",
+              "value": "UKCIP",
+              "hits": 13
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__research_group%5D%5B%5D=UKCIP&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_contributors__research_group.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_subject",
+      "attributes": {
+        "label": "Subject",
+        "items": [
+          {
+            "attributes": {
+              "label": "Climate systems and policy",
+              "value": "Climate systems and policy",
+              "hits": 111
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_subject%5D%5B%5D=Climate+systems+and+policy&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Environment",
+              "value": "Environment",
+              "hits": 108
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_subject%5D%5B%5D=Environment&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Environmental change",
+              "value": "Environmental change",
+              "hits": 80
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_subject%5D%5B%5D=Environmental+change&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_subject.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_language",
+      "attributes": {
+        "label": "Language",
+        "items": [
+          {
+            "attributes": {
+              "label": "English",
+              "value": "English",
+              "hits": 5161
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_language%5D%5B%5D=English&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "French",
+              "value": "French",
+              "hits": 20
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_language%5D%5B%5D=French&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Chinese",
+              "value": "Chinese",
+              "hits": 2
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_language%5D%5B%5D=Chinese&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_language.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_thesis_degree_level",
+      "attributes": {
+        "label": "Thesis Level",
+        "items": [
+          {
+            "attributes": {
+              "label": "Doctoral",
+              "value": "Doctoral",
+              "hits": 668
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_level%5D%5B%5D=Doctoral&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Masters",
+              "value": "Masters",
+              "hits": 32
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_level%5D%5B%5D=Masters&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "\n Doctoral \n",
+              "value": "\n Doctoral \n",
+              "hits": 0
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_level%5D%5B%5D=%0A+Doctoral+%0A&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_thesis_degree_level.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_thesis_degree_name",
+      "attributes": {
+        "label": "Thesis Type",
+        "items": [
+          {
+            "attributes": {
+              "label": "DPhil",
+              "value": "DPhil",
+              "hits": 666
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_name%5D%5B%5D=DPhil&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "MSc by Research",
+              "value": "MSc by Research",
+              "hits": 9
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_name%5D%5B%5D=MSc+by+Research&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "MPhil",
+              "value": "MPhil",
+              "hits": 8
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_name%5D%5B%5D=MPhil&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_thesis_degree_name.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "pivot_thesis_type",
+      "attributes": {
+        "label": "Thesis Type",
+        "items": [
+          {
+            "attributes": {
+              "label": "Doctoral",
+              "value": "Doctoral",
+              "hits": 668
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_level%5D%5B%5D=Doctoral&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Masters",
+              "value": "Masters",
+              "hits": 32
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_thesis_degree_level%5D%5B%5D=Masters&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/pivot_thesis_type.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_funding__funder_name",
+      "attributes": {
+        "label": "Funder",
+        "items": [
+          {
+            "attributes": {
+              "label": "Natural Environment Research Council",
+              "value": "Natural Environment Research Council",
+              "hits": 615
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_funding__funder_name%5D%5B%5D=Natural+Environment+Research+Council&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "European Commission",
+              "value": "European Commission",
+              "hits": 189
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_funding__funder_name%5D%5B%5D=European+Commission&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Natural Environmental Research Council",
+              "value": "Natural Environmental Research Council",
+              "hits": 172
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_funding__funder_name%5D%5B%5D=Natural+Environmental+Research+Council&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_funding__funder_name.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_item_year",
+      "attributes": {
+        "label": "Item Date",
+        "items": [
+          {
+            "attributes": {
+              "label": "2024",
+              "value": "2024",
+              "hits": 601
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&range%5Bf_item_year%5D%5B%5D=2024"
+            }
+          },
+          {
+            "attributes": {
+              "label": "2025",
+              "value": "2025",
+              "hits": 555
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&range%5Bf_item_year%5D%5B%5D=2025"
+            }
+          },
+          {
+            "attributes": {
+              "label": "2022",
+              "value": "2022",
+              "hits": 463
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&range%5Bf_item_year%5D%5B%5D=2022"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_item_year.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_journal_title",
+      "attributes": {
+        "label": "Journal",
+        "items": [
+          {
+            "attributes": {
+              "label": "Geophysical Research Letters",
+              "value": "Geophysical Research Letters",
+              "hits": 114
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_journal_title%5D%5B%5D=Geophysical+Research+Letters&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Environmental Research Letters",
+              "value": "Environmental Research Letters",
+              "hits": 109
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_journal_title%5D%5B%5D=Environmental+Research+Letters&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Nature",
+              "value": "Nature",
+              "hits": 87
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_journal_title%5D%5B%5D=Nature&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_journal_title.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_contributors__name",
+      "attributes": {
+        "label": "F Contributors  Name",
+        "items": [
+          {
+            "attributes": {
+              "label": "Stier, P",
+              "value": "Stier, P",
+              "hits": 183
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__name%5D%5B%5D=Stier%2C+P&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Allen, M",
+              "value": "Allen, M",
+              "hits": 161
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__name%5D%5B%5D=Allen%2C+M&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Palmer, T",
+              "value": "Palmer, T",
+              "hits": 119
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_contributors__name%5D%5B%5D=Palmer%2C+T&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_contributors__name.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "f_keyword",
+      "attributes": {
+        "label": "Keyword",
+        "items": [
+          {
+            "attributes": {
+              "label": "FFR",
+              "value": "FFR",
+              "hits": 1276
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_keyword%5D%5B%5D=FFR&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "climate change",
+              "value": "climate change",
+              "hits": 790
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_keyword%5D%5B%5D=climate+change&per_page=3&q=climate"
+            }
+          },
+          {
+            "attributes": {
+              "label": "Climate change",
+              "value": "Climate change",
+              "hits": 191
+            },
+            "links": {
+              "self": "https://ora.ox.ac.uk/objects.json?f%5Bf_keyword%5D%5B%5D=Climate+change&per_page=3&q=climate"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects/facet/f_keyword.json?per_page=3&q=climate"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "all_fields",
+      "attributes": {
+        "label": "All Fields"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&search_field=all_fields"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "title",
+      "attributes": {
+        "label": "Title"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&search_field=title"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "author",
+      "attributes": {
+        "label": "Author"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&search_field=author"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "keyword",
+      "attributes": {
+        "label": "Keyword"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&search_field=keyword"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "score desc",
+      "attributes": {
+        "label": "relevance"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&sort=score+desc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "record_publication_date desc",
+      "attributes": {
+        "label": "newly added"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&sort=record_publication_date+desc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "record_publication_date asc",
+      "attributes": {
+        "label": "oldest added"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&sort=record_publication_date+asc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "computed__contains_full_text desc",
+      "attributes": {
+        "label": "contains full text"
+      },
+      "links": {
+        "self": "https://ora.ox.ac.uk/objects.json?per_page=3&q=climate&sort=computed__contains_full_text+desc"
+      }
+    }
+  ]
+}

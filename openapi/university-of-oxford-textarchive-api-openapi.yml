@@ -1,0 +1,117 @@
+openapi: 3.2.0
+info:
+  title: Oxford OAI-PMH Interface Text Archive API
+  version: '2.0'
+  summary: OAI-PMH 2.0 harvesting for the Bodleian Libraries' Oxford Text Archive.
+  description: 'A second, separate institution-operated OAI-PMH endpoint, distinct from ORA. The Oxford
+
+    Text Archive is a language-resources repository run by the Bodleian Libraries on a DSpace
+
+    installation at ota.bodleian.ox.ac.uk. DSpace is open-source software Oxford installs and
+
+    runs itself — not a hosted vendor platform — so the surface is institution-operated, not a
+
+    tenancy.
+
+
+    The Identify response carries an OLAC archive description naming the institution as
+
+    "Bodleian Libraries, University of Oxford" with a physical address at Osney Mead, Oxford,
+
+    which is unusually explicit provenance for a repository endpoint. Note two honest defects
+
+    visible in that response: an unresolved template variable `${lr.desription.access}` in the
+
+    OLAC access field (with the typo in the software''s own key), and an OLAC record last
+
+    reviewed 2020-02-26. `deletedRecord` is `transient`, unlike ORA''s `no`.
+
+
+    DERIVED: this is a convenience description of a protocol Oxford implements. Oxford
+
+    publishes no OpenAPI for it.
+
+    '
+  contact:
+    name: Oxford Text Archive — Bodleian Libraries, University of Oxford
+    email: ota@bodleian.ox.ac.uk
+    url: https://ota.bodleian.ox.ac.uk/repository/xmlui/page/about
+  x-operator: institution
+  x-operator-evidence: Identify response reports repositoryIdentifier ota.bodleian.ox.ac.uk, adminEmail ota@bodleian.ox.ac.uk and an OLAC institution of "Bodleian Libraries, University of Oxford". DSpace is self-hosted open-source software, not a vendor tenancy.
+  x-provenance:
+    generated: '2026-08-19'
+    method: derived
+    source: Derived from a live Identify response captured 2026-08-19, stored verbatim in ../examples/university-of-oxford-ota-oai-identify.xml.
+  x-standard: https://www.openarchives.org/OAI/openarchivesprotocol.html
+servers:
+- url: https://ota.bodleian.ox.ac.uk/repository/oai/request
+  description: Oxford Text Archive OAI-PMH base URL. The Identify response self-reports this base URL over http; https is what actually answers.
+tags:
+- name: TextArchive
+  description: OAI-PMH harvesting of Oxford Text Archive records.
+paths:
+  /:
+    get:
+      operationId: otaOaiRequest
+      summary: Issue an OAI-PMH verb against the Oxford Text Archive
+      tags:
+      - TextArchive
+      parameters:
+      - name: verb
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - Identify
+          - ListSets
+          - ListMetadataFormats
+          - ListIdentifiers
+          - ListRecords
+          - GetRecord
+      - name: metadataPrefix
+        in: query
+        required: false
+        schema:
+          type: string
+        example: oai_dc
+      - name: set
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: identifier
+        in: query
+        required: false
+        description: Form `oai:ota.bodleian.ox.ac.uk:20.500.12024/{id}` (Handle-based).
+        schema:
+          type: string
+        example: oai:ota.bodleian.ox.ac.uk:20.500.12024/0001
+      - name: from
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: until
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: resumptionToken
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OAI-PMH response envelope. Protocol errors are returned inside a 200 body via an <error> element, not as an HTTP status.
+          content:
+            text/xml:
+              schema:
+                type: string
+                contentMediaType: text/xml
+              examples:
+                identify:
+                  externalValue: ../examples/university-of-oxford-ota-oai-identify.xml

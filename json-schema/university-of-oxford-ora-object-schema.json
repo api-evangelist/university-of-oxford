@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-oxford/main/json-schema/university-of-oxford-ora-object-schema.json",
+  "title": "ORA Object Response",
+  "description": "Response body returned by GET https://ora.ox.ac.uk/objects/{uuid}.json for a single repository record. DERIVED by API Evangelist from a live unauthenticated response captured 2026-08-19; the University of Oxford publishes no schema for this endpoint. x-operator: institution.",
+  "x-operator": "institution",
+  "x-provenance": {
+    "generated": "2026-08-19",
+    "method": "derived",
+    "source": "https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b.json — payload in ../examples/university-of-oxford-ora-object-response.json"
+  },
+  "type": "object",
+  "required": ["data"],
+  "properties": {
+    "links": {
+      "type": "object",
+      "properties": { "self": { "type": "string", "format": "uri" } }
+    },
+    "data": {
+      "$ref": "university-of-oxford-ora-search-response-schema.json#/$defs/record"
+    }
+  }
+}

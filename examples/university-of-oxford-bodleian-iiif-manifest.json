@@ -1,0 +1,2537 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/064e049b-bef1-4973-a752-d1b5d026d4a4.json",
+  "@type": "sc:Manifest",
+  "label": "Lincoln College LC/PH/P",
+  "description": "Glass Plate negative collection: Arnold Fairbairns for Stephen Warner\u2019s book Lincoln College, Oxford",
+  "metadata": [
+    {
+      "label": "Homepage",
+      "value": "<span><a href=\"https://digital.bodleian.ox.ac.uk/objects/064e049b-bef1-4973-a752-d1b5d026d4a4/\">View on Digital Bodleian</a></span>"
+    },
+    {
+      "label": "Title",
+      "value": "Glass Plate negative collection: Arnold Fairbairns for Stephen Warner\u2019s book Lincoln College, Oxford"
+    },
+    {
+      "label": "Shelfmark",
+      "value": "Lincoln College LC/PH/P"
+    },
+    {
+      "label": "Photographer",
+      "value": "Arnold Fairbairns"
+    },
+    {
+      "label": "Language",
+      "value": "English, Middle (1100-1500)"
+    },
+    {
+      "label": "Language",
+      "value": "Latin"
+    },
+    {
+      "label": "Language",
+      "value": "English"
+    },
+    {
+      "label": "Language",
+      "value": "No linguistic content"
+    },
+    {
+      "label": "Date Statement",
+      "value": "1908"
+    },
+    {
+      "label": "Place of Origin",
+      "value": "England"
+    },
+    {
+      "label": "Description",
+      "value": "Glass plate negatives from the original photography commissioned by Stephen A. Warner from 'his old college friend' Arnold Fairbairns. They were used extensively to illustrate Warner's history of Lincoln College, published in 1908. In the preface Warner acknowledges Fairbairns' 'magnificent series of photographs'. They appear to have been undertaken as a fairly systematic survey of College and include exterior and interior views, Rectors' signatures from documents in the archives, plate, portraits, memorials and views of College property."
+    },
+    {
+      "label": "Materials",
+      "value": "glass"
+    },
+    {
+      "label": "Extent",
+      "value": "83 plates."
+    },
+    {
+      "label": "Record Origin",
+      "value": "Descriptions prepared by Jon Newman c.2000, Lindsay McCormack and John Jeffs, 2019."
+    },
+    {
+      "label": "Collection",
+      "value": "Photographs"
+    },
+    {
+      "label": "Additional Information Sources",
+      "value": "Further details about the Lincoln College Archive are available from: https://www.lincoln.ox.ac.uk/Archive."
+    },
+    {
+      "label": "Record Created",
+      "value": "2019-11-14T11:57:50+00:00"
+    },
+    {
+      "label": "Holding Institution",
+      "value": "Lincoln College, University of Oxford"
+    },
+    {
+      "label": "Digitization Sponsor",
+      "value": "<span>John Jeffs</span>"
+    },
+    {
+      "label": "Digitization Sponsor",
+      "value": "<span>Andrew Sherwood</span>"
+    }
+  ],
+  "navDate": "1908-01-01T00:00:00Z",
+  "rendering": {
+    "@id": "https://digital.bodleian.ox.ac.uk/objects/064e049b-bef1-4973-a752-d1b5d026d4a4/",
+    "label": "View on Digital Bodleian",
+    "format": "text/html"
+  },
+  "attribution": "<span>\u00a9 Lincoln College, Oxford. Terms of use: Creative Commons Attribution-NonCommercial license (<a href=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC</a>).</span>",
+  "logo": {
+    "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb2b78b9-f5ff-4026-954d-afab5e881713/full/256,/0/default.jpg",
+    "@type": "dctypes:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "profile": "http://iiif.io/api/image/2/level1.json",
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb2b78b9-f5ff-4026-954d-afab5e881713"
+    }
+  },
+  "thumbnail": {
+    "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d/full/256,/0/default.jpg",
+    "@type": "dctypes:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "profile": "http://iiif.io/api/image/2/level1.json",
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d"
+    }
+  },
+  "viewingHint": "paged",
+  "viewingDirection": "left-to-right",
+  "sequences": [
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/sequence/064e049b-bef1-4973-a752-d1b5d026d4a4_default.json",
+      "@type": "sc:Sequence",
+      "label": "Default",
+      "canvases": [
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json",
+          "@type": "sc:Canvas",
+          "label": "LC/PH/P/A/1",
+          "width": 6006,
+          "height": 7680,
+          "images": [
+            {
+              "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 6006,
+                "height": 7680,
+                "service": {
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              }
+            }
+          ],
+          "otherContent": []
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8ea4724-974b-4233-a8ab-465b42586fe0.json",
+          "@type": "sc:Canvas",
+          "label": "LC/PH/P/A/2",
+          "width": 6123,
+          "height": 7588,
+          "images": [
+            {
+              "@id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/c8ea4724-974b-4233-a8ab-465b42586fe0.json",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8ea4724-974b-4233-a8ab-465b42586fe0.json",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c8ea4724-974b-4233-a8ab-465b42586fe0",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 6123,
+                "height": 7588,
+                "service": {
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c8ea4724-974b-4233-a8ab-465b42586fe0",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              }
+            }
+          ],
+          "otherContent": []
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0000",
+      "@type": "sc:Range",
+      "label": "LC/PH/P",
+      "viewingHint": "top",
+      "canvases": [],
+      "ranges": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0001",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0002",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0003",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0004",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0005",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0006",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0007",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0008",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0009",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0010",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0011",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0012",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0013",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0014",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0015",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0016",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0017",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0018",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0019",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0020",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0021",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0022",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0023",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0024",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0025",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0026",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0027",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0028",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0029",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0030",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0031",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0032",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0033",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0034",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0035",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0036",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0037",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0038",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0039",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0040",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0041",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0042",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0043",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0044",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0045",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0046",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0047",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0048",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0049",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0050",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0051",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0052",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0053",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0054",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0055",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0056",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0057",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0058",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0059",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0060",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0061",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0062",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0063",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0064",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0065",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0066",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0067",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0068",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0069",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0070",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0071",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0072",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0073",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0074",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0075",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0076",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0077",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0078",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0079",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0080",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0081",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0082",
+        "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0083"
+      ],
+      "metadata": [],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0001",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Hall Interior"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Interior view from High Table to entrance doors showing portraits and table layout."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3e8184e8-c075-4f8b-96d3-f2799bd9f61d.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0002",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8ea4724-974b-4233-a8ab-465b42586fe0.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel Screen"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Interior view to the Screen and the door into Ante-Chapel."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8ea4724-974b-4233-a8ab-465b42586fe0.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0003",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/625fa21a-00f7-438e-afd1-9dc15147c5f1.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Front Quadrangle"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view to Lodge showing clock and belvedere."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/625fa21a-00f7-438e-afd1-9dc15147c5f1.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0004",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/cc81e516-ae20-47ca-8bf1-e36d821bf1f6.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Portrait of Nathaniel, Lord Crewe"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/4"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Portrait of Crewe hanging in situ in Hall."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/cc81e516-ae20-47ca-8bf1-e36d821bf1f6.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0005",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1fc4712f-fa47-42d6-8be2-0ad94749e86f.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Library [Garden Building] Exterior"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/5"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Front elevation to newly built Library."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1fc4712f-fa47-42d6-8be2-0ad94749e86f.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0006",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/786293f1-b581-49ef-81e2-480b3ff5ac0f.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Hall Interior"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/6"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View from entrance doors to High Table, showing fireplace and portraits."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/786293f1-b581-49ef-81e2-480b3ff5ac0f.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0007",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0ad2cdc2-8998-446e-94e7-10bbbf488537.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel Quadrangle"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/7"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view across quadrangle from the Chapel."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0ad2cdc2-8998-446e-94e7-10bbbf488537.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0008",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/A/8",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8d381f6d-511e-4b3a-9f65-cf0dd8f856cf.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Front Quadrange"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/A/8"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view from Lodge across to Hall entrance."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8d381f6d-511e-4b3a-9f65-cf0dd8f856cf.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0009",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/B/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/55bc7b21-7e6a-494a-a6f8-389b498e39e2.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Turl Street Frontage"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/B/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View from the site of the Rector's Lodgings along the College frontage towards Brasenose Lane."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/55bc7b21-7e6a-494a-a6f8-389b498e39e2.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0010",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/B/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/87c030d3-1380-42f9-a6ba-25086156ac49.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel Stained Glass showing Prophets"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/B/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Detail of glass from North Window showing the Old Testament prophets Malachi, Zacharias and Amos."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/87c030d3-1380-42f9-a6ba-25086156ac49.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0011",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/B/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/371c5e9a-d5cf-46f0-9558-8d10636fe14f.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "The Grove Quadrangle"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/B/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique elevation to front of Grove buildings."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/371c5e9a-d5cf-46f0-9558-8d10636fe14f.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0012",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/B/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/57abb7e5-8ecd-47dc-ba2f-223498c09f7a.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Pavilion"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/B/4"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Elevation to front."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/57abb7e5-8ecd-47dc-ba2f-223498c09f7a.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0013",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9cb8e06d-3ec6-4dd0-881c-e8b9c5e90639.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Portrait of Mark Pattison, Rector"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Portrait, disframed, in Hall."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9cb8e06d-3ec6-4dd0-881c-e8b9c5e90639.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0014",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/63c8495f-6bf7-4a54-b311-8563b64bc91b.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel Exterior from Fellows' Garden"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Exterior view from Fellows' Garden."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/63c8495f-6bf7-4a54-b311-8563b64bc91b.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0015",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/bef50f43-4aa8-4f77-8680-c81d01097205.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Portrait of Thomas Rotherham, Bishop of Lincoln"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Portrait in Hall."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/bef50f43-4aa8-4f77-8680-c81d01097205.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0016",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/827b6db9-aeef-4a41-9afb-e980933e2261.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Portrait of Richard Fleming, Bishop of Lincoln"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/4"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Portrait in Hall."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/827b6db9-aeef-4a41-9afb-e980933e2261.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0017",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/19f76887-a333-4896-937a-643970c446a8.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Turl Street from Brasenose Lane to All Saints' Church"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/5"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View from Brasenose Lane to All Saints' Church."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/19f76887-a333-4896-937a-643970c446a8.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0018",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/671985e3-d6f3-401b-b248-dc06f67ce0c4.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Wycliffe Bible specimen page"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/6"
+        },
+        {
+          "label": "Language",
+          "value": "English, Middle (1100-1500)"
+        },
+        {
+          "label": "Description",
+          "value": "Page from the ms translation of the Bible by John Wycliffe; the first page of the Book of Proverbs. This book is the property of Lincoln College but is now deposited in the Bodleian Library."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/671985e3-d6f3-401b-b248-dc06f67ce0c4.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0019",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/C/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/52533299-bff4-4771-8aae-341e267a2845.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Lincoln College Coat of Arms"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/C/7"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Illustration and signed confirmation of the award of arms. Pasted into inside cover of Medium Registrum."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/52533299-bff4-4771-8aae-341e267a2845.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0020",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/D/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2a50a843-bc88-4928-a4b9-495986ca73b3.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "St Michael's at the Northgate"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/D/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view south to church tower and corner of Ship Street."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2a50a843-bc88-4928-a4b9-495986ca73b3.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0021",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/D/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f30883e7-68fe-4cc0-83b1-8b49854ec01e.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel, Interior View to Altar"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/D/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View from Nave to East Window showing choir stalls, lectern and altar."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f30883e7-68fe-4cc0-83b1-8b49854ec01e.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0022",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/D/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c62b878a-c8f8-4035-a5a4-597630b1671c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel East Window"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/D/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "East Window."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c62b878a-c8f8-4035-a5a4-597630b1671c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0023",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4d349bfd-525d-46d1-9277-e6a403b7973a.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of James Thompson, Rector 1851-1860"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/1"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in College Order Book."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4d349bfd-525d-46d1-9277-e6a403b7973a.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0024",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d8a60479-ef1b-4ec8-933d-ea8eccdba38a.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of John Radford, Rector 1834-1851"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/2"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in College Order Book."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d8a60479-ef1b-4ec8-933d-ea8eccdba38a.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0025",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/22455e46-59d4-4220-b59f-848370080c42.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Edward Tatham, Rector 1792-1834"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/3"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Novum Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/22455e46-59d4-4220-b59f-848370080c42.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0026",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/14afdf80-1bf9-419c-98f5-0637a8bef10d.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of John Horner, Rector 1784-1792"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/4"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Novum Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/14afdf80-1bf9-419c-98f5-0637a8bef10d.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0027",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8f399f86-c3b2-4c9d-a1dc-31e93181c9bf.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Charles Mortimer, Rector 1781-1784"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/5"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Novum Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8f399f86-c3b2-4c9d-a1dc-31e93181c9bf.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0028",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ec31963f-22c2-498a-b919-cbb2e1bfc0e8.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Richard Hutchins, Rector 1755-1781"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/6"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Novum Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ec31963f-22c2-498a-b919-cbb2e1bfc0e8.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0029",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/40e300b3-f3c6-4d1f-8f0f-8c66fd891c87.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Euseby Isham, Rector 1731-1755"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/7"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Novum Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/40e300b3-f3c6-4d1f-8f0f-8c66fd891c87.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0030",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/8",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1d1d7499-3786-417e-8f9b-3f53e23641ec.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of John Morley, Rector 1719-1731"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/8"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1d1d7499-3786-417e-8f9b-3f53e23641ec.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0031",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/9",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/615ea642-f93e-45fc-bb87-d51f8c7fa538.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Fitzherbert Adams, Rector 1685-1719"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/9"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/615ea642-f93e-45fc-bb87-d51f8c7fa538.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0032",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/10",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e0925b00-55ae-4e9b-80ed-4ea9a7f6f6e8.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Thomas Marshall, Rector 1672-1685"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/10"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e0925b00-55ae-4e9b-80ed-4ea9a7f6f6e8.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0033",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/11",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/81d48dbc-f9fd-421b-afc7-675ddb22283b.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Nathaniel Crewe, Rector 1668-1672, signing as Bishop of Oxford"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/11"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/81d48dbc-f9fd-421b-afc7-675ddb22283b.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0034",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/12",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e59d645f-c8f3-4509-9feb-b77e56c83dd6.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Nathaniel Crewe, Rector 1668-1672"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/12"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e59d645f-c8f3-4509-9feb-b77e56c83dd6.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0035",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/13",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/49054846-0f7c-4146-8630-19e9e798f495.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Paul Hood, Rector 1620-1668"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/13"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/49054846-0f7c-4146-8630-19e9e798f495.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0036",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/14",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/edbe4e45-f624-402a-8cb7-2605341e5851.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Richard Kilby, Rector 1590-1620"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/14"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/edbe4e45-f624-402a-8cb7-2605341e5851.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0037",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/15",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/137229a6-57b1-460c-a249-234fb48818ad.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Francis Babington, Rector 1560-1563"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/15"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/137229a6-57b1-460c-a249-234fb48818ad.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0038",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/16",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77c9ceac-0dd1-4feb-97ff-43c94435d0cb.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Henry Henshaw, Rector 1558-1559"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/16"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum? 'Henricus' in the glass plate negative, from the original signature in the College Register, appears differently in Stephen A Warner's book."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77c9ceac-0dd1-4feb-97ff-43c94435d0cb.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0039",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/E/17",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5d961815-8cd3-4386-a374-bd8c23f98c5b.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of John Underhill, Rector 1577-1590"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/E/17"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Medium Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5d961815-8cd3-4386-a374-bd8c23f98c5b.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0040",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/130f95e6-4715-4a58-810e-22f1d8e96658.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Thomas Rotherham, Bishop of Lincoln, 1471-1480"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/130f95e6-4715-4a58-810e-22f1d8e96658.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0041",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/046ae855-a31e-48c6-af45-898a37f2e131.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "John Wesley's Letter of Resignation, 1751"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/2"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Wesley's signed letter of resignation of his Lincoln Fellowship; Novum Registrum I, reverse of folio 15."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/046ae855-a31e-48c6-af45-898a37f2e131.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0042",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/637b4263-26fd-4e47-90bb-bc5ac8587e39.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Christopher Hargreaves, Rector 1556-1558"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/3"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/637b4263-26fd-4e47-90bb-bc5ac8587e39.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0043",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/cc95faa0-f888-46c5-b511-c04a1af6ff1a.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of Thomas Drax, Rector 1503-1519"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/4"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/cc95faa0-f888-46c5-b511-c04a1af6ff1a.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0044",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6fba1052-55ab-4a82-9bd3-117435442616.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "View toward the exterior of the Kitchen"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/5"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Exterior view from the Grove."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6fba1052-55ab-4a82-9bd3-117435442616.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0045",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/F/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1d770c74-162a-4270-9afd-e5df77ce7782.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Signature of John Cottisford, Rector 1519-1539"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/F/6"
+        },
+        {
+          "label": "Language",
+          "value": "English"
+        },
+        {
+          "label": "Description",
+          "value": "Signature in Vetus Registrum?"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1d770c74-162a-4270-9afd-e5df77ce7782.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0046",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0009918d-b0bc-4c52-90a5-c4b45f622780.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Flat-topped Communion Flagon, silver gilt. London, 1671"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Chapel plate. Silver flat-topped Communion Flagon with cover, engraved with arms and a presentation inscription of Sir Edmund Denton \\[Alexander Denton?\\] of Hilsdon, Bucks. Maker's mark TK a four leaf clover below, London, 1671, cylindrical body engraved with the arms of the donor and an inscription dated 1672, spreading skirt base, flattened domed cover engraved with the College arms, pierced thumbpiece and scroll handle, scratch weight 60oz 5d, 12\u00c2\u00bein high, engraved weight is 70oz."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0009918d-b0bc-4c52-90a5-c4b45f622780.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0047",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/972ca269-68e6-40fe-bfa0-bd3fa6722232.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Plain Jug with long spout, 1743"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. Silver jug; inscription and arms of donor, Thomas Bathurst, son of Benjamin Bathurst, of Lidney, Glos. R Gurney & T Cooke, London, 1743, plain baluster body on spreading foot with pronounced everted lip spout, scroll handle, engraved with the arms of the College and the donor, 9in high, 37oz."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/972ca269-68e6-40fe-bfa0-bd3fa6722232.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0048",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c6ef5146-79ae-4d32-99fd-044e190a9007.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Branched Candlestick, n.d."
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. A branched, two-light candelabrum. Sheffield plate, with lead or pewter embossed ornamentation. Height 19.5 inches; width 15 inches. Used in Hall."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c6ef5146-79ae-4d32-99fd-044e190a9007.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0049",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/12c82dc2-dbe2-4215-9c6f-9687e9185f8c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Silver Punch Bowl, 1726"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/4"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. Two-handled silver punch bowl, engraved with the arms of College and a presentation inscription from the donor. London, 1726. Maker, F. G. above a mullet in a shield. height, 7 7/8 inches, diameter at mouth, 11.5 inches. Arms of donor, John Medley of the City of Lincoln \\[arg.\\] two bars in chief three mullets \\[gu.\\]."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/12c82dc2-dbe2-4215-9c6f-9687e9185f8c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0050",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ccd6c198-dfa7-429e-91d2-2e22afd575d8.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Grace Cup, 1762"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/5"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. Two-handled cup engraved with the arms of College, a presentation inscription and the arms of the donor. Silver. London, 1762. Maker T C W W in a circle. Weight, 59oz; height, with cover, 13/25 inches. Arms of donor, Sir Peter Davis, of Somerset (sa) a cinquefoil (or) between three bugle horns (arg.) stringed (of the second)."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ccd6c198-dfa7-429e-91d2-2e22afd575d8.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0051",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d942d230-1d65-4820-af24-0537021d0676.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Porringer, 1680"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/6"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. Two-handled porringer engraved with the arms of and a presentation inscription from the donor. Silver. London, 1680. Maker I. H. above pellets and a fleur-de-lys. Height: 6.25 inches, weight 67 oz 8 dwt. Arms of donor, Sir William Ellys, Bart. (gu.) of Nocton, Lincolnshire on a fess (arg.) between three crescents (or) as many escallopes (az.) with the Ulster Badge."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d942d230-1d65-4820-af24-0537021d0676.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0052",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/634514ab-b53a-44da-88be-a9a6dfe8c026.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Jug, n.d."
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/7"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. A silver jug with lid engraved with the arms of College and a presentation inscription and the arms of Benjamin Bathurst."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/634514ab-b53a-44da-88be-a9a6dfe8c026.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0053",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/8",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/62c7c7f9-4677-4a4e-a21a-21412feec9bd.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Tankard or Sconce, 1702"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/8"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. A Queen Anne silver tankard with cover engraved with the arms of College and a presentation inscription and the arms of Nicholas Corsellis. Robert Timbrell, London, 1702, slightly tapering cylindrical body engraved with the arms of Corsellis de Wivenhoe and with an inscription, the flat domed cover with the arms of the college, scroll handle with knurled thumbpiece, 8\u00c2\u00bdin high, 40.8oz, some repairs."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/62c7c7f9-4677-4a4e-a21a-21412feec9bd.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0054",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/9",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3da945f6-592b-4482-bdd9-253f4c0079c1.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chapel Candlestick, 1683, one of a pair"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/9"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "Chapel plate. A Charles II silver altar candlestick. One of a pair of candlesticks, maker's mark DB an annulet below, London, 1683, the large square bases rising to similarly shaped flanges below fluted column stems, engraved with a presentation inscription from Georgius Wheler \\[George Wheler\\] dated 1683, also with scratch weights 23 11 and 23 7, fitted with later pricket sockets, John Swift, London, circa 1750, 10\u00c2\u00bdin high, the bases 6\u00c2\u00bein square."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3da945f6-592b-4482-bdd9-253f4c0079c1.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0055",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/10",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f56dc435-adc7-498c-ac50-ecaa5108a66c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Cake Basket, 1763"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/10"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. A George III oval basket engraved with the arms of College and the donor. Silver. London, 1763 or 1765. Maker illegible. Height, 4.5 inches, diameter 15.75 by 13.125 inches. Arms of donor, Nicholas Corsellis, of Wivenhoe, Essex (az.) a griffin sergeant (or), quartered with those of Child, of Woodford (vert) two bars engrailed between three leopards' heads (or)."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f56dc435-adc7-498c-ac50-ecaa5108a66c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0056",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/11",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2bc1fb64-1ed4-42ff-ae43-2cadd71848e2.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Silver Jug, 1723"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/11"
+        },
+        {
+          "label": "Language",
+          "value": "Latin"
+        },
+        {
+          "label": "Description",
+          "value": "College plate. A silver jug with lid. Edward Pocock, London, circa 1723, with hinged lid surmounted by a baluster finial and engraved \\'Coll Linc\\', the baluster body on spreading foot, applied with a girdle and short spout, scroll handle, engraved with the College arms and those of the donor, presentation inscription of Henry Hamilton dated 1735, scratch weight 55:8, 12in high, 57.5oz. Makers mark stamped twice, date letter H for 1723, cover unmarked."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2bc1fb64-1ed4-42ff-ae43-2cadd71848e2.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0057",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/G/12",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/569fad4f-5a16-452e-8018-74bc4f87c906.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chalice and Paten, 1625"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/G/12"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Chapel plate. A Charles I silver Communion Cup and Paten Cover, maker's mark TH a device (perhaps an escallop shell) below, London, 1625, the plain cup on stepped circular base with stamped ovolo border, similar decoration to the knop, the beaker shaped bowl everted at the lip, the paten with reeded rim and spool shaped knop, scratch weights respectively 11oz 17d and 3oz 3d, 7\u00c2\u00bein high, paten 4in diameter."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/569fad4f-5a16-452e-8018-74bc4f87c906.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0058",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/H/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77c88035-7441-466d-80eb-d56a3ec39d5c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Tomb of Thomas Rotherham, Archbishop of York, York Cathedral"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/H/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View of the Rotherham Tomb in York Minster."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77c88035-7441-466d-80eb-d56a3ec39d5c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0059",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/H/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/97479a32-89c0-4008-a10b-f3a05deb022e.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Statue of St Paul in Chapel"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/H/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Pew end; carved wooden figure of Saint Paul."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/97479a32-89c0-4008-a10b-f3a05deb022e.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0060",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f4091ce9-bb5a-4121-95a1-45dcdbb47761.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Group of three unidentified men"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Group photograph on seat in a garden."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f4091ce9-bb5a-4121-95a1-45dcdbb47761.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0061",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/44ccb7d9-bf6c-4b9f-9b82-7d7e2403ece0.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view of stone cottage and thatched farm building from road; young man leaning on fence."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/44ccb7d9-bf6c-4b9f-9b82-7d7e2403ece0.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0062",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/aeb9b414-8bad-4791-bfd6-70c84f870e82.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view to rear of stone farmhouse and thatched farm buildings."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/aeb9b414-8bad-4791-bfd6-70c84f870e82.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0063",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/213dd928-f7f9-45ca-a00b-6ab90b1e4d70.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/4"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Distant view along lane to stone farmhouse and farm buildings; older man wearing a top hat in foreground in front of a hedge."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/213dd928-f7f9-45ca-a00b-6ab90b1e4d70.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0064",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/604212ed-6419-472b-b9e5-86068f686e87.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/5"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view along a village street; stone house in foreground is shown from rear in photograph PH/P/J/10; couple standing in the gate of the house."
+        },
+        {
+          "label": "Related Items",
+          "value": "Lincoln College LC/PH/P/J/10"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/604212ed-6419-472b-b9e5-86068f686e87.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0065",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/28b80e21-4903-42a8-8f45-ef149b673e7f.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, Iffley"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/6"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to Iffley Mill from Iffley Lock."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/28b80e21-4903-42a8-8f45-ef149b673e7f.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0066",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/I/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d7fc16e2-51c6-4f23-8af5-1b4678d11365.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, Iffley"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/I/7"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to Iffley Mill from the river Thames showing the stone weir."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d7fc16e2-51c6-4f23-8af5-1b4678d11365.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0067",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/1",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9b35bbff-f03e-4137-bd15-2fab829fdd0e.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/1"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View in farm yard showing thatched out buildings and haystacks; two men standing"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9b35bbff-f03e-4137-bd15-2fab829fdd0e.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0068",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/2",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5b886a4b-46cb-4b76-bd74-c234242c1e60.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Pollicott Manor"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/2"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to rear of manor house."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5b886a4b-46cb-4b76-bd74-c234242c1e60.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0069",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/3",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e63dfb9d-de07-47f1-a535-458a446f544b.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/3"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Oblique view to rear of thatched farmhouse."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e63dfb9d-de07-47f1-a535-458a446f544b.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0070",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/4",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ed169d79-7875-4ac8-8d47-2354445c0a77.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/4"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View across poultry yard to part-thatched farmhouse."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ed169d79-7875-4ac8-8d47-2354445c0a77.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0071",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/5",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d0b44217-d7e8-4807-91a4-0b1c4e0d6f29.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, Iffley Manor House?"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/5"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to rear of crenellated manor house; front view of same in LC/PH/P/J/8."
+        },
+        {
+          "label": "Related Items",
+          "value": "Lincoln College LC/PH/P/J/8"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d0b44217-d7e8-4807-91a4-0b1c4e0d6f29.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0072",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/6",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c99c746c-04ea-455b-bea5-8a12aa19f803.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/6"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Detail of stone window frame in house."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c99c746c-04ea-455b-bea5-8a12aa19f803.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0073",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/7",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5a13bae8-78d4-4232-8339-f53f6d897c41.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Iffley"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/7"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to Iffley Mill from Iffley Lock; church tower visible."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5a13bae8-78d4-4232-8339-f53f6d897c41.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0074",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/8",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/10881625-858b-4a76-9fe4-770aade0b3ad.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, Iffley Manor House?"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/8"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View to front of crenellated manor house; rear view of same in LC/PH/P/J/5."
+        },
+        {
+          "label": "Related Items",
+          "value": "Lincoln College LC/PH/P/J/5"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/10881625-858b-4a76-9fe4-770aade0b3ad.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0075",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/9",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/89ac268a-e243-48e6-a8a7-e129ca75bc31.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Pollicott Manor"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/9"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Distant view to rear of manor house and Manor? Farm."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/89ac268a-e243-48e6-a8a7-e129ca75bc31.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0076",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/10",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/7ab7a86c-893f-4d3a-963f-13a7781c227c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College properties, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/10"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Rear view of stone farmhouse from yard; front view is shown in LC/PH/P/I/5."
+        },
+        {
+          "label": "Related Items",
+          "value": "Lincoln College LC/PH/P/I/5"
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/7ab7a86c-893f-4d3a-963f-13a7781c227c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0077",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/11",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d6089d86-1f87-497f-b4d5-8343ad316f0d.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/11"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Rear of stone farm house from vegetable garden; three men in front."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d6089d86-1f87-497f-b4d5-8343ad316f0d.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0078",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/12",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1667f6de-4ff4-48ef-8bc3-2919af9e04d4.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/12"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View from lane of thatched farm house and outbuildings."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1667f6de-4ff4-48ef-8bc3-2919af9e04d4.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0079",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/13",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/27cdd7d3-1013-4632-b629-865face2e50c.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Chalgrove"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/13"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Front view of the Six Bells Inn."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/27cdd7d3-1013-4632-b629-865face2e50c.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0080",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/14",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9931866c-d9a3-43d2-85e6-f9c8924e3aa4.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Policott Manor"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/14"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "Front view of Manor House and farm buildings with three people standing against the fence and a horse in the foreground."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9931866c-d9a3-43d2-85e6-f9c8924e3aa4.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0081",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/15",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4ed5e2f7-4e7e-4240-aecb-e24378c1d4b4.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/15"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View of thatched farm buildings with two carts in the barn."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4ed5e2f7-4e7e-4240-aecb-e24378c1d4b4.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0082",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/16",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ca7827b9-3913-45ed-8b08-1f6900d80838.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "Pollicott"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/16"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View of College Farm with Manor House in the background."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ca7827b9-3913-45ed-8b08-1f6900d80838.json"
+    },
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/range/064e049b-bef1-4973-a752-d1b5d026d4a4/LOG_0083",
+      "@type": "sc:Range",
+      "label": "LC/PH/P/J/17",
+      "canvases": [
+        "https://iiif.bodleian.ox.ac.uk/iiif/canvas/b922f3e7-7d27-491c-8f2b-ebfa0ee9abc4.json"
+      ],
+      "metadata": [
+        {
+          "label": "Titles",
+          "value": "College property, unidentified"
+        },
+        {
+          "label": "Image Range",
+          "value": "LC/PH/P/J/17"
+        },
+        {
+          "label": "Language",
+          "value": "No linguistic content"
+        },
+        {
+          "label": "Description",
+          "value": "View of recently re-roofed farm buildings, with a pile of slates and a brood of chickens."
+        }
+      ],
+      "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/b922f3e7-7d27-491c-8f2b-ebfa0ee9abc4.json"
+    }
+  ],
+  "_trimmed": "canvases[] truncated to the first 2 of the live response for readability; all other fields verbatim"
+}

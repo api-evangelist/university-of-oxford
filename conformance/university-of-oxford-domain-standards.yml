@@ -1,0 +1,140 @@
+name: University of Oxford — education-regime domain standard conformance
+description: >-
+  Conformance evidence read from what Oxford's endpoints actually return, not from prose
+  claims. Scored against the Kin Score `education` regime standards[] set. Reward-only: a
+  standard absent from this file is absent because no evidence was found for it, and several
+  standards are recorded explicitly as NOT claimable even though a related vendor system is in
+  use, because the conformance belongs to the vendor rather than to Oxford.
+generated: '2026-08-19'
+method: probed
+source: live unauthenticated HTTP probes plus the eduGAIN and DataCite public APIs
+regime: education
+conformance:
+  - standard: oai-pmh
+    status: conformant
+    x-operator: institution
+    evidence:
+      - url: https://ora.ox.ac.uk/oai2?verb=Identify
+        status: 200
+        location: OAI-PMH/Identify/protocolVersion
+        detail: >-
+          protocolVersion 2.0; repositoryName "ORA - Oxford University Research Archive";
+          repositoryIdentifier ora.ox.ac.uk; granularity YYYY-MM-DDThh:mm:ssZ;
+          deletedRecord no; earliestDatestamp 2026-04-27T12:42:43Z.
+      - url: https://ora.ox.ac.uk/oai2?verb=ListSets
+        status: 200
+        location: OAI-PMH/ListSets
+        detail: 16 sets published, all of the form type_of_work:<kind>.
+      - url: https://ota.bodleian.ox.ac.uk/repository/oai/request?verb=Identify
+        status: 200
+        location: OAI-PMH/Identify
+        detail: >-
+          A second, independent institution-operated OAI-PMH provider — the Oxford Text
+          Archive, repositoryIdentifier ota.bodleian.ox.ac.uk, adminEmail
+          ota@bodleian.ox.ac.uk, deletedRecord transient.
+      - url: https://ora.ox.ac.uk/api
+        status: 200
+        location: Documentation
+        detail: >-
+          Oxford publishes harvesting guidance, identifier migration rules, a set list, an
+          update schedule, a deletion policy and a Tuesday 07:00-09:00 UK maintenance window.
+  - standard: datacite
+    status: conformant
+    x-operator: institution
+    evidence:
+      - url: https://ora.ox.ac.uk/oai2?verb=ListMetadataFormats
+        status: 200
+        location: ListMetadataFormats/metadataFormat[metadataPrefix='datacite_dc']
+        detail: >-
+          schema https://schema.datacite.org/meta/kernel-4.6/metadata.xsd, namespace
+          https://schema.datacite.org/schema/kernel-4.6/ — DataCite kernel 4.6.
+      - url: https://ora.ox.ac.uk/oai2?verb=ListRecords&metadataPrefix=datacite_dc
+        status: 200
+        location: resource/identifier[@identifierType='DOI']
+        detail: Records emit DOIs with identifierType="DOI" in DataCite 4.6 form.
+      - url: https://api.datacite.org/clients/bl.oxdb
+        status: 200
+        location: data.attributes
+        detail: >-
+          DataCite repository client bl.oxdb, name "Oxford University Research Archive",
+          url https://ora.ox.ac.uk/, active, registered 2010-12-17, 40,283 DOIs minted.
+  - standard: orcid
+    status: conformant
+    x-operator: institution
+    evidence:
+      - url: https://ora.ox.ac.uk/oai2?verb=ListRecords&metadataPrefix=datacite_dc
+        status: 200
+        location: resource/creators/creator/nameIdentifier[@nameIdentifierScheme='ORCID']
+        detail: Creator name identifiers are emitted with nameIdentifierScheme="ORCID".
+      - url: https://ora.ox.ac.uk/oai2?verb=ListRecords&metadataPrefix=rioxx_terms
+        status: 200
+        location: rioxxterms:author/@id
+        detail: >-
+          Author identifiers are emitted as orcid.org/ URIs across the RIOXX profile as well,
+          so ORCID is carried in more than one serialisation.
+  - standard: shibboleth
+    status: conformant
+    x-operator: institution
+    evidence:
+      - url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+        status: 200
+        location: md:EntityDescriptor/md:IDPSSODescriptor
+        detail: >-
+          A live Shibboleth Identity Provider on Oxford IT Services infrastructure serving SAML
+          2.0 IdP metadata. CAVEAT, recorded rather than hidden: the document served at this
+          URL is the Shibboleth software's built-in self-description and still carries the
+          product's default placeholder DisplayName and an internal node entityID
+          (https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/shibboleth). It is proof the IdP is
+          running; it is NOT the federation-registered entity. The registration below is.
+      - url: https://technical.edugain.org/api.php?action=list_entities&format=json
+        status: 200
+        location: entity[entityid='https://registry.shibboleth.ox.ac.uk/idp']
+        detail: >-
+          Oxford's production IdP is registered in eduGAIN as
+          https://registry.shibboleth.ox.ac.uk/idp, IDPSSODescriptor, display name "University
+          of Oxford", registration authority http://ukfederation.org.uk. Two further test IdPs
+          (idp-test.shibboleth.ox.ac.uk, idp.iamtest.ox.ac.uk) are registered alongside it.
+  - standard: saml
+    status: conformant
+    x-operator: institution
+    evidence:
+      - url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+        status: 200
+        location: md:IDPSSODescriptor/@protocolSupportEnumeration
+        detail: >-
+          protocolSupportEnumeration urn:oasis:names:tc:SAML:2.0:protocol, with SAML2
+          Redirect/SSO, POST/SSO, POST-SimpleSign/SSO, POST/SLO and SOAP/Redirect/SLO
+          bindings and a signing X509 certificate valid 2026-05-15 to 2046-05-15.
+      - url: https://technical.edugain.org/api.php?action=list_entities&format=json
+        status: 200
+        location: entities filtered on ox.ac.uk
+        detail: >-
+          38 ox.ac.uk SAML entities in eduGAIN — 3 identity providers and 35 service
+          providers spanning central IT, colleges and departments (All Souls, Worcester,
+          Lincoln, Keble, St Hilda's, Brasenose, Exeter, St John's, Continuing Education,
+          NDORMS, Structural Biology, Statistics, the Oxford Text Archive and others). This is
+          a federated identity estate operated by the institution, not bought from anyone.
+not-claimed:
+  - standard: lti
+    reason: >-
+      Oxford runs Canvas at canvas.ox.ac.uk, which CNAMEs to
+      universityofoxford-vanity.instructure.com. Canvas is LTI-certified — but that
+      certification is Instructure's, not Oxford's. Recording it here would credit the
+      institution for a vendor's conformance, which is exactly the failure this pipeline
+      exists to prevent.
+  - standard: scim
+    reason: No SCIM endpoint or provisioning contract found on any Oxford-operated host.
+  - standard: oneroster
+    reason: Not found. OneRoster adoption is concentrated in K-12, not UK higher education.
+  - standard: ed-fi
+    reason: Not found. Ed-Fi is a US K-12 data standard and does not apply here.
+  - standard: caliper
+    reason: >-
+      No Caliper event surface found. Any Caliper capability inside Canvas would again be
+      Instructure's conformance, not Oxford's.
+  - standard: qti
+    reason: No QTI item bank or assessment interchange surface found on an Oxford-operated host.
+  - standard: crossref
+    reason: >-
+      No Oxford-operated Crossref depositor surface found. Oxford University Press is a Crossref
+      member, but OUP is a separate legal entity and is not profiled under this slug.

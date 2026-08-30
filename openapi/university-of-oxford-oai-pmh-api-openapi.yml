@@ -1,0 +1,138 @@
+openapi: 3.2.0
+info:
+  title: ORA — Oxford University Research Archive Interface OAI PMH API
+  version: '2.0'
+  summary: OAI-PMH 2.0 metadata harvesting for Oxford's institutional open-access repository.
+  description: 'The one API surface Oxford actually documents. ORA is a registered OAI-PMH data provider;
+
+    the Bodleian Libraries publish harvesting guidance, a set list, an update schedule, a
+
+    deletion policy and a maintenance window at https://ora.ox.ac.uk/api, which is more
+
+    operational transparency than most institutional repositories offer.
+
+
+    Ten metadata formats are served, including datacite_dc against the DataCite 4.6 kernel,
+
+    oai_openaire against the OpenAIRE 4.0 literature guidelines, three RIOXX profiles (one of
+
+    which, rioxx_terms_cc0, is released under CC0), uketd_dc for EThOS theses, and customised
+
+    profiles for Oxford''s own SOLO discovery layer, BASE and Unpaywall. Records carry ORCID
+
+    identifiers under nameIdentifierScheme="ORCID" and DOIs under identifierType="DOI".
+
+
+    This OpenAPI is a DERIVED convenience description of a protocol Oxford implements, not a
+
+    contract Oxford publishes. OAI-PMH is defined by the Open Archives Initiative, and the
+
+    authoritative description of this endpoint''s behaviour is the endpoint''s own Identify,
+
+    ListSets and ListMetadataFormats responses, captured verbatim in ../examples/.
+
+    '
+  contact:
+    name: ORA — Bodleian Libraries, University of Oxford
+    email: ora-dev@bodleian.ox.ac.uk
+    url: https://ora.ox.ac.uk/api
+  termsOfService: https://ora.ox.ac.uk/terms_of_use
+  x-operator: institution
+  x-operator-evidence: Identify response reports repositoryIdentifier ora.ox.ac.uk, origin baseURL ora4-rhel9-prd-public2.bodleian.ox.ac.uk and adminEmail ora-dev@bodleian.ox.ac.uk — all University of Oxford / Bodleian Libraries infrastructure.
+  x-provenance:
+    generated: '2026-08-19'
+    method: derived
+    source: Derived from Oxford's own published guidance at https://ora.ox.ac.uk/api plus live Identify, ListSets and ListMetadataFormats responses captured 2026-08-19 and stored in ../examples/.
+  x-standard: https://www.openarchives.org/OAI/openarchivesprotocol.html
+servers:
+- url: https://ora.ox.ac.uk/oai2
+  description: ORA OAI-PMH 2.0 base URL
+tags:
+- name: OAI-PMH
+  description: Open Archives Initiative Protocol for Metadata Harvesting verbs.
+paths:
+  /:
+    get:
+      operationId: oaiRequest
+      summary: Issue an OAI-PMH verb
+      description: 'OAI-PMH dispatches on the `verb` query parameter against a single base URL. Selective harvesting by publication date is NOT supported by this endpoint — Oxford states the datestamps track last modification in the ORA website and are designed for incremental synchronisation, not for date-scoped extraction. Selective harvesting by type of work IS supported via `set`. Deletions are not tracked: `deletedRecord` is `no` and deleted records simply disappear.'
+      tags:
+      - OAI-PMH
+      parameters:
+      - name: verb
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - Identify
+          - ListSets
+          - ListMetadataFormats
+          - ListIdentifiers
+          - ListRecords
+          - GetRecord
+      - name: metadataPrefix
+        in: query
+        description: Required for ListIdentifiers, ListRecords and GetRecord.
+        required: false
+        schema:
+          type: string
+          enum:
+          - oai_dc
+          - solo_dc
+          - uketd_dc
+          - datacite_dc
+          - base_dc
+          - oai_openaire
+          - rioxx_terms
+          - rioxx_terms_cc0
+          - rioxx_terms_v3
+          - unpaywall_dc
+      - name: set
+        in: query
+        description: Selective harvesting by type of work, e.g. `type_of_work:thesis`, `type_of_work:dataset`, `type_of_work:journal_article`. Full list via ListSets.
+        required: false
+        schema:
+          type: string
+      - name: identifier
+        in: query
+        description: Required for GetRecord. Form `oai:ora.ox.ac.uk:uuid:<uuid>`. Harvesters that used the pre-2018 endpoint can migrate old identifiers by prefixing `ora:ora.ox.ac.uk:`.
+        required: false
+        schema:
+          type: string
+        example: oai:ora.ox.ac.uk:uuid:000d2073-9081-4a5b-b238-021cc7178e49
+      - name: from
+        in: query
+        description: Lower bound on the modification datestamp, for incremental harvesting. Best taken from the last server response. Not a publication-date filter.
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: until
+        in: query
+        description: Upper bound on the modification datestamp. Oxford advises not setting it.
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: resumptionToken
+        in: query
+        description: Exclusive with all other parameters except verb.
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: An OAI-PMH response envelope. Note that OAI-PMH signals protocol errors inside a 200 body via an <error> element with a code attribute, not via HTTP status.
+          content:
+            text/xml:
+              schema:
+                type: string
+                contentMediaType: text/xml
+              examples:
+                identify:
+                  externalValue: ../examples/university-of-oxford-ora-oai-identify.xml
+                listMetadataFormats:
+                  externalValue: ../examples/university-of-oxford-ora-oai-listmetadataformats.xml
+        '503':
+          description: Scheduled maintenance. Oxford publishes a window of Tuesday 07:00-09:00 UK time during which the OAI-PMH service may be briefly unavailable.

@@ -1,0 +1,22 @@
+name: University of Oxford — authorization scopes
+description: >-
+  There are none, and the absence is the finding rather than a gap in our research. No
+  institution-operated Oxford API uses OAuth, OIDC or any token-based authorization, so there
+  is no scope vocabulary to record. This file exists so that a reader does not have to wonder
+  whether scopes were simply never looked for.
+generated: '2026-08-19'
+method: probed
+source: >-
+  Live probes of every surface in apis.yml. No .well-known/oauth-authorization-server,
+  .well-known/openid-configuration, token endpoint or client-registration page was found on
+  any ox.ac.uk host examined.
+scopes: []
+notes:
+  - >-
+    The nearest equivalent to authorization at Oxford is SAML attribute release through the
+    Shibboleth IdP to 35 federated service providers. SAML attribute bundles are not API
+    scopes and are deliberately not recorded as such here.
+  - >-
+    The tenant surfaces in apis.yml (Figshare, Ex Libris Primo VE, Instructure Canvas, CoreHR)
+    do have OAuth scope vocabularies. Those belong to the vendors' own catalog entries, not to
+    Oxford, and are not reproduced here.

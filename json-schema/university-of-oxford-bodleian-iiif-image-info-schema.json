@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-oxford/main/json-schema/university-of-oxford-bodleian-iiif-image-info-schema.json",
+  "title": "Digital Bodleian IIIF Image Information",
+  "description": "The info.json document returned by the Digital Bodleian IIIF Image API 2.1 endpoint. DERIVED from a live response captured 2026-08-19. The normative contract is the IIIF Image API 2.1 specification (https://iiif.io/api/image/2.1/); this schema records the profile and capabilities THIS deployment actually advertises. x-operator: institution.",
+  "x-operator": "institution",
+  "x-provenance": {
+    "generated": "2026-08-19",
+    "method": "derived",
+    "source": "https://iiif.bodleian.ox.ac.uk/iiif/image/020bcaa4-29c9-48a7-8701-e2cfaaba84d0/info.json — payload in ../examples/university-of-oxford-bodleian-iiif-image-info.json"
+  },
+  "type": "object",
+  "required": ["@context", "@id", "protocol", "width", "height", "profile"],
+  "properties": {
+    "@context": { "type": "string", "const": "http://iiif.io/api/image/2/context.json" },
+    "@id": { "type": "string", "format": "uri" },
+    "protocol": { "type": "string", "const": "http://iiif.io/api/image" },
+    "width": { "type": "integer", "minimum": 1 },
+    "height": { "type": "integer", "minimum": 1 },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "width": { "type": "integer" },
+          "height": { "type": "integer" }
+        }
+      }
+    },
+    "tiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "width": { "type": "integer" },
+          "height": { "type": "integer" },
+          "scaleFactors": { "type": "array", "items": { "type": "integer" } }
+        }
+      }
+    },
+    "profile": {
+      "type": "array",
+      "description": "First element is the compliance level URI; subsequent elements describe capabilities. This deployment advertises level 2.",
+      "items": {
+        "oneOf": [
+          { "type": "string", "format": "uri" },
+          {
+            "type": "object",
+            "properties": {
+              "formats": { "type": "array", "items": { "type": "string", "enum": ["jpg", "png", "tif", "webp", "avif"] } },
+              "qualities": { "type": "array", "items": { "type": "string", "enum": ["native", "color", "gray", "bitonal"] } },
+              "supports": { "type": "array", "items": { "type": "string" } },
+              "maxWidth": { "type": "integer" },
+              "maxHeight": { "type": "integer" }
+            }
+          }
+        ]
+      }
+    },
+    "service": {
+      "description": "Annex services. This deployment attaches a physical-dimensions service carrying physicalScale and physicalUnit.",
+      "type": ["array", "object"]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-oxford/main/json-schema/university-of-oxford-ora-search-response-schema.json",
+  "title": "ORA Search Response",
+  "description": "Response body returned by GET https://ora.ox.ac.uk/objects.json. DERIVED by API Evangelist from live unauthenticated responses captured 2026-08-19; the University of Oxford publishes no schema for this endpoint. x-operator: institution.",
+  "x-operator": "institution",
+  "x-provenance": {
+    "generated": "2026-08-19",
+    "method": "derived",
+    "source": "https://ora.ox.ac.uk/objects.json?q=climate — payload in ../examples/university-of-oxford-ora-search-response.json"
+  },
+  "type": "object",
+  "required": ["links", "meta", "data"],
+  "properties": {
+    "links": {
+      "type": "object",
+      "description": "Cursor links. next and prev are absent on the first and last page respectively.",
+      "properties": {
+        "self": { "type": "string", "format": "uri" },
+        "next": { "type": "string", "format": "uri" },
+        "prev": { "type": "string", "format": "uri" },
+        "last": { "type": "string", "format": "uri" }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": ["pages"],
+      "properties": {
+        "pages": { "$ref": "#/$defs/pages" }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    },
+    "included": {
+      "type": "array",
+      "description": "The service's own vocabulary — facets, search fields and sort orders — returned with every result set.",
+      "items": { "$ref": "#/$defs/included" }
+    }
+  },
+  "$defs": {
+    "pages": {
+      "type": "object",
+      "properties": {
+        "current_page": { "type": "integer" },
+        "next_page": { "type": ["integer", "null"] },
+        "prev_page": { "type": ["integer", "null"] },
+        "total_pages": { "type": "integer" },
+        "limit_value": { "type": "integer", "description": "Observed default 10." },
+        "offset_value": { "type": "integer" },
+        "total_count": { "type": "integer" },
+        "first_page?": { "type": "boolean", "description": "Key literally contains a question mark — a Ruby predicate method name serialised straight into JSON." },
+        "last_page?": { "type": "boolean" }
+      }
+    },
+    "documentValue": {
+      "type": "object",
+      "description": "The envelope ORA wraps every metadata attribute in, pairing the machine value with a human label.",
+      "required": ["attributes"],
+      "properties": {
+        "id": { "type": "string", "description": "Fragment URI identifying this attribute on the record." },
+        "type": { "type": "string", "const": "document_value" },
+        "attributes": {
+          "type": "object",
+          "required": ["value"],
+          "properties": {
+            "value": { "type": "array", "items": { "type": "string" } },
+            "label": { "type": "string" }
+          }
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "required": ["id", "attributes"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "type": {
+          "type": ["string", "null"],
+          "description": "Present and null on every record observed. Recorded as observed; do not depend on it."
+        },
+        "attributes": {
+          "type": "object",
+          "description": "Attribute set varies: search results carry a reduced set, the single-record endpoint the full set. title is a bare string; every other observed attribute is a documentValue.",
+          "properties": {
+            "title": { "type": "string" }
+          },
+          "additionalProperties": { "$ref": "#/$defs/documentValue" }
+        },
+        "links": {
+          "type": "object",
+          "properties": { "self": { "type": "string", "format": "uri" } }
+        }
+      }
+    },
+    "included": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["facet", "search_field", "sort"] },
+        "id": { "type": "string" },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "label": { "type": "string" },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "attributes": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string" },
+                      "value": { "type": "string" },
+                      "hits": { "type": "integer" }
+                    }
+                  },
+                  "links": {
+                    "type": "object",
+                    "properties": { "self": { "type": "string", "format": "uri" } }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "links": {
+          "type": "object",
+          "properties": { "self": { "type": "string", "format": "uri" } }
+        }
+      }
+    }
+  }
+}

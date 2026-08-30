@@ -1,0 +1,348 @@
+openapi: 3.2.0
+info:
+  title: ORA — Oxford University Research Archive Search Repository API
+  version: '2026-08-19'
+  summary: JSON:API-shaped search and record retrieval over Oxford's institutional open-access repository.
+  description: 'A derived description of the JSON responses that the Oxford University Research Archive
+
+    (ORA) returns from its public object endpoints. ORA is operated by the Bodleian Libraries,
+
+    University of Oxford, on the University''s own infrastructure — the OAI-PMH Identify
+
+    response for the same service echoes the origin host
+
+    `ora4-rhel9-prd-public2.bodleian.ox.ac.uk` and the admin contact
+
+    `ora-dev@bodleian.ox.ac.uk`. The application is a Blacklight/Solr front end that Oxford
+
+    develops in-house (its own source is referenced at gitlab.bodleian.ox.ac.uk/ORA4).
+
+
+    IMPORTANT PROVENANCE NOTE: Oxford does not publish this contract. Oxford documents the
+
+    OAI-PMH interface at https://ora.ox.ac.uk/api and says nothing about the JSON endpoints.
+
+    This document was DERIVED by API Evangelist from live, unauthenticated responses captured
+
+    on 2026-08-19 and stored verbatim in ../examples/. It describes behaviour that was
+
+    observed, not behaviour Oxford has committed to. Treat it as an undocumented surface that
+
+    may change without notice, and read ORA''s harvesting etiquette at https://ora.ox.ac.uk/api
+
+    before automating against it — the operator asks large-scale harvesters to make contact
+
+    first and reserves the right to block unexpected scraping.
+
+    '
+  contact:
+    name: ORA — Bodleian Libraries, University of Oxford
+    email: ora-dev@bodleian.ox.ac.uk
+    url: https://ora.ox.ac.uk/api
+  termsOfService: https://ora.ox.ac.uk/terms_of_use
+  license:
+    name: Metadata available under CC0 1.0 via the rioxx_terms_cc0 OAI-PMH format
+    url: https://creativecommons.org/publicdomain/zero/1.0/
+  x-operator: institution
+  x-operator-evidence: ora.ox.ac.uk is a University of Oxford registrable domain; the OAI-PMH Identify response for the same service names ora4-rhel9-prd-public2.bodleian.ox.ac.uk as the origin and ora-dev@bodleian.ox.ac.uk as the administrator.
+  x-provenance:
+    generated: '2026-08-19'
+    method: derived
+    source: Derived from live unauthenticated GET responses to https://ora.ox.ac.uk/objects.json and https://ora.ox.ac.uk/objects/{id}.json captured 2026-08-19; payloads stored in ../examples/university-of-oxford-ora-search-response.json and ../examples/university-of-oxford-ora-object-response.json.
+servers:
+- url: https://ora.ox.ac.uk
+  description: ORA public production (fronted by Cloudflare; some paths are bot-challenged)
+tags:
+- name: Repository
+  description: Search and retrieval of ORA repository records.
+paths:
+  /objects.json:
+    get:
+      operationId: searchObjects
+      summary: Search ORA repository records
+      description: Returns a paged, faceted result set of ORA records. The response also carries the service's own vocabulary — the supported search_field values, sort orders and facet fields — under `included`, which makes the endpoint self-describing.
+      tags:
+      - Repository
+      parameters:
+      - name: q
+        in: query
+        description: Free-text query.
+        required: false
+        schema:
+          type: string
+        example: climate
+      - name: search_field
+        in: query
+        description: Field the query is applied to. Observed values come from the service's own `included[type=search_field]` entries.
+        required: false
+        schema:
+          type: string
+          enum:
+          - all_fields
+          - title
+          - author
+          - keyword
+          default: all_fields
+      - name: sort
+        in: query
+        description: Sort order, taken from the service's own `included[type=sort]` entries.
+        required: false
+        schema:
+          type: string
+          enum:
+          - score desc
+          - record_publication_date desc
+          - record_publication_date asc
+          - computed__contains_full_text desc
+          default: score desc
+      - name: page
+        in: query
+        description: 1-indexed page number.
+        required: false
+        schema:
+          type: integer
+          minimum: 1
+          default: 1
+      - name: per_page
+        in: query
+        description: Page size. The observed default is 10; the operator has not documented a maximum, so callers should not assume one.
+        required: false
+        schema:
+          type: integer
+          minimum: 1
+          default: 10
+      - name: f
+        in: query
+        description: Facet filter, sent Rails-style as `f[<facet_id>][]=<value>` — for example `f[f_type_of_work][]=Thesis`. Facet ids are listed in the response's `included[type=facet]` entries.
+        required: false
+        style: deepObject
+        explode: true
+        schema:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: A page of matching records with facets and the service vocabulary.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+              examples:
+                climate:
+                  summary: Probed response, trimmed to 3 records
+                  externalValue: ../examples/university-of-oxford-ora-search-response.json
+        '403':
+          description: Cloudflare managed challenge. Observed on other ORA paths (for example /objects/opensearch.xml) for non-browser clients. The service is live; the request was mitigated, not refused by the application.
+          content:
+            text/html:
+              schema:
+                type: string
+        '429':
+          description: Not observed, but ORA's published etiquette states that unexpected spidering or scraping may lead to access being blocked. Documented here so clients back off.
+  /objects/{objectId}.json:
+    get:
+      operationId: getObject
+      summary: Retrieve one ORA record
+      description: Returns the full metadata document for a single ORA record. Every attribute is wrapped in a `document_value` envelope carrying a human `label` alongside the `value` array.
+      tags:
+      - Repository
+      parameters:
+      - name: objectId
+        in: path
+        required: true
+        description: ORA record identifier, in the form `uuid:<uuid>`.
+        schema:
+          type: string
+          pattern: ^uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+        example: uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b
+      responses:
+        '200':
+          description: The record.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ObjectResponse'
+              examples:
+                record:
+                  externalValue: ../examples/university-of-oxford-ora-object-response.json
+        '404':
+          description: No such record. Observed as an HTML error page rather than a JSON error body — the service has no machine-readable error format.
+          content:
+            text/html:
+              schema:
+                type: string
+components:
+  schemas:
+    Pages:
+      type: object
+      properties:
+        current_page:
+          type: integer
+        next_page:
+          type:
+          - integer
+          - 'null'
+        prev_page:
+          type:
+          - integer
+          - 'null'
+        total_pages:
+          type: integer
+        limit_value:
+          type: integer
+        offset_value:
+          type: integer
+        total_count:
+          type: integer
+        first_page?:
+          type: boolean
+        last_page?:
+          type: boolean
+    Included:
+      type: object
+      description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
+      properties:
+        type:
+          type: string
+          enum:
+          - facet
+          - search_field
+          - sort
+        id:
+          type: string
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/FacetItem'
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+    Record:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ORA record identifier, `uuid:<uuid>`.
+        type:
+          description: Present on every observed record and null on every observed record. Recorded as observed; do not depend on it.
+          type:
+          - string
+          - 'null'
+        attributes:
+          type: object
+          description: Metadata attributes. `title` is a plain string; every other observed attribute is a DocumentValue. The attribute set varies by record — search results carry a reduced set, the single-record endpoint the full set.
+          properties:
+            title:
+              type: string
+          additionalProperties:
+            $ref: '#/components/schemas/DocumentValue'
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+      required:
+      - id
+      - attributes
+    FacetItem:
+      type: object
+      properties:
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            value:
+              type: string
+            hits:
+              type: integer
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+    SearchResponse:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+            next:
+              type: string
+              format: uri
+            prev:
+              type: string
+              format: uri
+            last:
+              type: string
+              format: uri
+        meta:
+          type: object
+          properties:
+            pages:
+              $ref: '#/components/schemas/Pages'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Record'
+        included:
+          type: array
+          items:
+            $ref: '#/components/schemas/Included'
+      required:
+      - links
+      - meta
+      - data
+    DocumentValue:
+      type: object
+      description: The envelope ORA wraps every metadata attribute in.
+      properties:
+        id:
+          type: string
+          description: Fragment URI identifying the attribute on the record.
+        type:
+          type: string
+          const: document_value
+        attributes:
+          type: object
+          properties:
+            value:
+              type: array
+              items:
+                type: string
+            label:
+              type: string
+              description: Human-facing label for the attribute.
+          required:
+          - value
+      required:
+      - attributes
+    ObjectResponse:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+        data:
+          $ref: '#/components/schemas/Record'
+      required:
+      - data

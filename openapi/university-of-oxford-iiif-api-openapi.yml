@@ -1,0 +1,230 @@
+openapi: 3.2.0
+info:
+  title: Digital Bodleian IIIF API
+  version: '2026-08-19'
+  summary: IIIF Image API 2.1 (level 2), Presentation API 2.1 and Change Discovery API 1.0 for the Bodleian Libraries and Oxford college libraries.
+  description: "The strongest institution-operated API surface in Oxford's estate, and one no vendor is\ninvolved in. iiif.bodleian.ox.ac.uk resolves to digital92-prd-public.bodleian.ox.ac.uk on\n129.67.247.151 — the University of Oxford's own address space — and serves three\nconformant IIIF specifications:\n\n  * Image API 2.1 at level 2, advertising jpg/png/tif/webp/avif, native/color/gray/bitonal,\n    regionByPct, regionSquare, sizeByConfinedWh, sizeByForcedWh, sizeByWh, sizeAboveFull,\n    rotationBy90s and mirroring, with maxWidth/maxHeight of 4000 and a physical-dimensions\n    service annex.\n  * Presentation API 2.1 manifests for every Digital Bodleian object, with per-object\n    attribution and rights statements that vary by holding institution (many Oxford\n    colleges publish through this shared infrastructure).\n  * Change Discovery API 1.0 — an OrderedCollection ActivityStream reporting 21,843 items\n    across 219 pages at the time of probing. This is a genuine event surface: a harvester\n    can synchronise incrementally rather than re-crawl.\n\nThe service root itself is machine-readable: GET https://iiif.bodleian.ox.ac.uk/ returns a\ndiscovery document listing the top-level collection, the all-manifests collection and the\nactivity stream.\n\nDERIVED, not published: Oxford explains IIIF in prose at https://digital.bodleian.ox.ac.uk/faq/\nbut publishes no OpenAPI. This document was derived from live responses captured\n2026-08-19 and stored verbatim in ../examples/. The normative contracts are the IIIF\nspecifications themselves.\n"
+  contact:
+    name: Digital Bodleian — Bodleian Libraries, University of Oxford
+    url: https://digital.bodleian.ox.ac.uk/help/
+  termsOfService: https://digital.bodleian.ox.ac.uk/terms/
+  x-operator: institution
+  x-operator-evidence: iiif.bodleian.ox.ac.uk CNAMEs to digital92-prd-public.bodleian.ox.ac.uk (129.67.247.151), University of Oxford address space. No vendor host, account or platform is involved.
+  x-provenance:
+    generated: '2026-08-19'
+    method: derived
+    source: Derived from live unauthenticated GETs of https://iiif.bodleian.ox.ac.uk/, /iiif/collection/top, /iiif/manifest/{id}.json, /iiif/image/{id}/info.json and /iiif/activity/all-changes captured 2026-08-19; payloads stored in ../examples/.
+  x-standards:
+  - https://iiif.io/api/image/2.1/
+  - https://iiif.io/api/presentation/2.1/
+  - https://iiif.io/api/discovery/1.0/
+servers:
+- url: https://iiif.bodleian.ox.ac.uk
+  description: Digital Bodleian IIIF production
+tags:
+- name: IIIF
+  description: IIIF Image, Presentation and Change Discovery endpoints.
+paths:
+  /:
+    get:
+      operationId: getServiceDescription
+      summary: IIIF service description
+      description: Lists the collections and activity streams this service exposes.
+      tags:
+      - IIIF
+      responses:
+        '200':
+          description: Change Discovery service description.
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                root:
+                  externalValue: ../examples/university-of-oxford-bodleian-iiif-service-description.json
+  /iiif/collection/{collectionId}:
+    get:
+      operationId: getCollection
+      summary: Retrieve a IIIF Presentation collection
+      description: '`top` is the root collection; `all` is every manifest; `institutions` groups items by holding institution. Other collection ids exist per curated collection.'
+      tags:
+      - IIIF
+      parameters:
+      - name: collectionId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: top
+      responses:
+        '200':
+          description: A sc:Collection document.
+          content:
+            application/ld+json:
+              schema:
+                type: object
+              examples:
+                top:
+                  externalValue: ../examples/university-of-oxford-bodleian-iiif-collection-top.json
+        '404':
+          description: Unknown collection. Returns text/plain with a body of the form "An object of ID {id} was not found." — a plain-text error, not a structured one.
+          content:
+            text/plain:
+              schema:
+                type: string
+  /iiif/manifest/{objectId}.json:
+    get:
+      operationId: getManifest
+      summary: Retrieve a IIIF Presentation manifest
+      tags:
+      - IIIF
+      parameters:
+      - name: objectId
+        in: path
+        required: true
+        description: Digital Bodleian object UUID, the same id used in /objects/{uuid}/ on the website.
+        schema:
+          type: string
+          pattern: ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+        example: 064e049b-bef1-4973-a752-d1b5d026d4a4
+      responses:
+        '200':
+          description: A sc:Manifest document.
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                manifest:
+                  externalValue: ../examples/university-of-oxford-bodleian-iiif-manifest.json
+        '404':
+          description: Unknown object.
+  /iiif/image/{imageId}/info.json:
+    get:
+      operationId: getImageInfo
+      summary: IIIF Image API information document
+      tags:
+      - IIIF
+      parameters:
+      - name: imageId
+        in: path
+        required: true
+        schema:
+          type: string
+        example: 020bcaa4-29c9-48a7-8701-e2cfaaba84d0
+      responses:
+        '200':
+          description: Image API 2.1 info.json, level 2 profile.
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                info:
+                  externalValue: ../examples/university-of-oxford-bodleian-iiif-image-info.json
+  /iiif/image/{imageId}/{region}/{size}/{rotation}/{quality}.{format}:
+    get:
+      operationId: getImage
+      summary: IIIF Image API request
+      description: 'Standard IIIF Image API 2.1 request syntax. Observed constraints from info.json: maxWidth 4000, maxHeight 4000, tile size 256 with scaleFactors 1-64.'
+      tags:
+      - IIIF
+      parameters:
+      - name: imageId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: region
+        in: path
+        required: true
+        description: full | square | x,y,w,h | pct:x,y,w,h
+        schema:
+          type: string
+        example: full
+      - name: size
+        in: path
+        required: true
+        description: max | w, | ,h | pct:n | w,h | !w,h
+        schema:
+          type: string
+        example: 256,
+      - name: rotation
+        in: path
+        required: true
+        description: 0 | 90 | 180 | 270, optionally prefixed with ! to mirror.
+        schema:
+          type: string
+        example: '0'
+      - name: quality
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - native
+          - color
+          - gray
+          - bitonal
+      - name: format
+        in: path
+        required: true
+        schema:
+          type: string
+          enum:
+          - jpg
+          - png
+          - tif
+          - webp
+          - avif
+      responses:
+        '200':
+          description: The requested image derivative.
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+            image/png:
+              schema:
+                type: string
+                format: binary
+        '400':
+          description: Malformed IIIF request. Observed as an HTML body from the fronting web server for a bare /iiif/ path — no structured error document.
+  /iiif/activity/all-changes:
+    get:
+      operationId: getActivityStream
+      summary: IIIF Change Discovery activity stream
+      description: An OrderedCollection with `first` and `last` OrderedCollectionPage links, letting a harvester synchronise incrementally instead of re-crawling the whole repository.
+      tags:
+      - IIIF
+      responses:
+        '200':
+          description: OrderedCollection.
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                stream:
+                  externalValue: ../examples/university-of-oxford-bodleian-iiif-activity-stream.json
+  /iiif/activity/page-{page}:
+    get:
+      operationId: getActivityStreamPage
+      summary: One page of the change activity stream
+      tags:
+      - IIIF
+      parameters:
+      - name: page
+        in: path
+        required: true
+        schema:
+          type: integer
+          minimum: 0
+      responses:
+        '200':
+          description: OrderedCollectionPage.
+          content:
+            application/json:
+              schema:
+                type: object
