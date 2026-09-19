@@ -189,6 +189,11 @@ apis:
   tags:
   - Research Data
   - Research Repository
+  - Tenants
+  - Figshare
+  tags_raw:
+  - Research Data
+  - Research Repository
   - Tenant
   - Figshare
   properties:
@@ -207,6 +212,11 @@ apis:
   humanURL: https://solo.bodleian.ox.ac.uk/
   baseURL: https://oxford.primo.exlibrisgroup.com
   tags:
+  - Library
+  - Discovery
+  - Tenants
+  - Ex Libris
+  tags_raw:
   - Library
   - Discovery
   - Tenant
@@ -229,6 +239,10 @@ apis:
   humanURL: https://canvas.ox.ac.uk/doc/api/
   baseURL: https://canvas.ox.ac.uk/api/v1/accounts
   tags:
+  - Learning Management
+  - Tenants
+  - Canvas
+  tags_raw:
   - Learning Management
   - Tenant
   - Canvas
@@ -255,7 +269,7 @@ apis:
   tags:
   - Human Resources
   - Recruitment
-  - Tenant
+  - Tenants
   - Core HR
   tags_raw:
   - Human Resources
