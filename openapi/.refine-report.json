@@ -1,0 +1,27 @@
+{
+  "provider": "university-of-oxford",
+  "sources": [
+    "_original/university-of-oxford-bodleian-iiif-openapi.yml",
+    "_original/university-of-oxford-ora-search-openapi.yml"
+  ],
+  "outputs": [
+    "university-of-oxford-iiif-api-openapi.yml",
+    "university-of-oxford-repository-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "2 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "university-of-oxford-bodleian-iiif-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "university-of-oxford-ora-search-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "_original/university-of-oxford-oxford-text-archive-oai-pmh-openapi.yml: archived document superseded by a larger archived document",
+    "_original/university-of-oxford-ora-oai-pmh-openapi.yml: archived document superseded by a larger archived document",
+    "university-of-oxford-iiif-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "university-of-oxford-repository-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}

@@ -4,32 +4,61 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: University of Oxford
 providerId: university-of-oxford
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-08-19'
 reconciled: false
 tags:
 - Education
 - Higher Education
 - University
 - Rate Limiting
-description: >-
-  University of Oxford does not publish a unified public rate-limit table across its APIs. Open
-  metadata and harvesting endpoints (OAI-PMH, IIIF, library) may throttle large-scale
-  or automated harvesting; clients should harvest politely, honor Retry-After, and
-  contact the relevant service for bulk access.
-notes: Confirm per-service limits with each API's documentation; harvest responsibly.
+description: 'The University of Oxford publishes no rate-limit table, no quota and no Retry-After header
+  on any institution-operated surface, and none was observed in probing. What it does publish, uniquely
+  for ORA, is an etiquette policy in prose: harvesters wanting all or a large sample of the repository
+  are asked to contact the service first, and Oxford states that unexpected spidering or scraping may
+  lead to access being blocked. That is a social control enforced by a human decision, not a technical
+  limit a client can read. Separately, ora.ox.ac.uk sits behind Cloudflare and issues managed challenges
+  (HTTP 403, cf-mitigated: challenge) to non-browser clients on some paths — bot mitigation rather than
+  rate limiting, but the practical failure mode a naive client will hit first.'
+notes: No 429 was observed on any surface. The throttled response code below is the protocol default,
+  recorded as an expectation rather than as an observation.
 sources:
 - https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/apis.yml
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: ORA OAI-PMH
   scope: client
-  metric: requests-per-minute
-  limit: see service documentation
-  notes: No published global limit; large harvests may be rate-limited.
+  metric: unspecified
+  limit: none published
+  notes: Oxford asks bulk harvesters to make contact first (https://ora.ox.ac.uk/api). Scheduled maintenance
+    Tuesdays 07:00-09:00 UK time may return 503.
+- name: ORA search / object JSON
+  scope: client
+  metric: unspecified
+  limit: none published
+  notes: Undocumented endpoint; no limit stated. robots.txt disallows /?q*, /?f*, /?page* and /export_csv_search_results,
+    which is the closest thing to a stated automation boundary.
+- name: Digital Bodleian IIIF
+  scope: client
+  metric: unspecified
+  limit: none published
+  notes: Image API info.json advertises maxWidth 4000 and maxHeight 4000 — a per-request size ceiling,
+    not a rate limit.
+- name: Oxford Text Archive OAI-PMH
+  scope: client
+  metric: unspecified
+  limit: none published
 policies:
+- name: Contact before bulk harvest
+  description: Oxford explicitly asks would-be bulk downloaders of ORA to get in touch so the service
+    can advise on approach.
 - name: Backoff Strategy
-  description: Exponential backoff with jitter; honor Retry-After; harvest during off-peak hours.
+  description: No Retry-After is emitted anywhere; clients should apply exponential backoff with jitter
+    on their own initiative and respect the published Tuesday maintenance window.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+generated: '2026-08-19'
+method: probed
+source: Oxford's published harvesting guidance at https://ora.ox.ac.uk/api plus live probes of every surface
+  in apis.yml on 2026-08-19

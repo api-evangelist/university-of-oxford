@@ -1,0 +1,85 @@
+name: University of Oxford — API lifecycle
+description: >-
+  Oxford's programmable estate has a documented history of decommissioning, and that history is
+  the most useful lifecycle signal in this profile. The University once ran one of the better
+  known public university open-data programmes in the UK; it was retired without a successor,
+  and the surfaces that remain today are library and repository infrastructure that predates and
+  outlived it.
+generated: '2026-08-19'
+method: probed
+source: live DNS and HTTP probes 2026-08-19, cross-read against review.yml
+stages:
+  - api: ORA OAI-PMH
+    stage: production
+    x-operator: institution
+    since: '2018'
+    detail: >-
+      The current ORA website dates from April 2018 and Oxford documents that OAI-PMH
+      datestamps do not predate it. The identifier scheme changed at that cutover and Oxford
+      publishes a migration rule for harvesters holding pre-2018 identifiers — genuine
+      versioning discipline, communicated in prose rather than in a contract.
+    maintenance_window: Tuesdays 07:00-09:00 UK time
+  - api: ORA search / object JSON
+    stage: undocumented
+    x-operator: institution
+    detail: >-
+      Live and stable in shape, but Oxford has never announced it, versioned it or promised
+      anything about it. Treat as internal-facing infrastructure that happens to answer.
+  - api: Digital Bodleian IIIF
+    stage: production
+    x-operator: institution
+    detail: >-
+      Image API 2.1, Presentation API 2.1 and Change Discovery API 1.0 — all major-version 2/1
+      IIIF, i.e. current-but-not-latest (IIIF Presentation 3.0 has been available since 2020).
+      The change discovery stream gives consumers a supported incremental-sync path, which is a
+      lifecycle affordance most repositories lack.
+  - api: Oxford Text Archive OAI-PMH
+    stage: maintained
+    x-operator: institution
+    detail: >-
+      Live, but showing age: earliest datestamp 2019, an OLAC archive description last reviewed
+      2020-02-26, and an unresolved template variable in the OLAC access field.
+  - api: Shibboleth Identity Provider
+    stage: production
+    x-operator: institution
+    detail: >-
+      Signing certificate issued 2026-05-15, valid to 2046-05-15 — recently rotated. Two test
+      IdPs are registered in the federation alongside production, which is a healthy sign.
+retired:
+  - api: Oxford Open Data Service (data.ox.ac.uk)
+    stage: decommissioned
+    detail: >-
+      OxPoints linked data, places, courses and vacancies over REST, SPARQL and a JavaScript
+      API. The domain still exists but publishes no A/AAAA record. No successor was published
+      and no deprecation notice survives at a reachable URL.
+    evidence:
+      - url: https://data.ox.ac.uk/
+        status: 0
+  - api: Mobile Oxford API (api.m.ox.ac.uk)
+    stage: decommissioned
+    detail: NXDOMAIN.
+    evidence:
+      - url: https://api.m.ox.ac.uk/
+        status: 0
+  - api: Open Data Service documentation (docs.data.ox.ac.uk)
+    stage: decommissioned
+    detail: NXDOMAIN. The documentation went with the service.
+    evidence:
+      - url: https://docs.data.ox.ac.uk/
+        status: 0
+  - api: WebLearn (weblearn.ox.ac.uk)
+    stage: decommissioned
+    detail: >-
+      The former Sakai VLE. The host still answers but returns 404 on the root; teaching has
+      moved to the Canvas tenancy recorded in apis.yml.
+    evidence:
+      - url: https://weblearn.ox.ac.uk/
+        status: 404
+observations:
+  - >-
+    No changelog, release notes, versioning policy or deprecation policy exists for any live
+    Oxford API surface. The retirement of the open-data programme was, as far as any reachable
+    URL shows, silent.
+  - >-
+    There is no status page for any of the API surfaces. status.it.ox.ac.uk covers IT Services
+    systems generally and does not list ORA, Digital Bodleian or the OAI-PMH endpoints.

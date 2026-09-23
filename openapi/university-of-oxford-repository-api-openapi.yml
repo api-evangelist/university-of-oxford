@@ -1,40 +1,11 @@
 openapi: 3.2.0
 info:
-  title: ORA — Oxford University Research Archive Search Repository API
+  title: ORA — Oxford University Research Archive Search Repository…
   version: '2026-08-19'
   summary: JSON:API-shaped search and record retrieval over Oxford's institutional open-access repository.
   description: 'A derived description of the JSON responses that the Oxford University Research Archive
 
-    (ORA) returns from its public object endpoints. ORA is operated by the Bodleian Libraries,
-
-    University of Oxford, on the University''s own infrastructure — the OAI-PMH Identify
-
-    response for the same service echoes the origin host
-
-    `ora4-rhel9-prd-public2.bodleian.ox.ac.uk` and the admin contact
-
-    `ora-dev@bodleian.ox.ac.uk`. The application is a Blacklight/Solr front end that Oxford
-
-    develops in-house (its own source is referenced at gitlab.bodleian.ox.ac.uk/ORA4).
-
-
-    IMPORTANT PROVENANCE NOTE: Oxford does not publish this contract. Oxford documents the
-
-    OAI-PMH interface at https://ora.ox.ac.uk/api and says nothing about the JSON endpoints.
-
-    This document was DERIVED by API Evangelist from live, unauthenticated responses captured
-
-    on 2026-08-19 and stored verbatim in ../examples/. It describes behaviour that was
-
-    observed, not behaviour Oxford has committed to. Treat it as an undocumented surface that
-
-    may change without notice, and read ORA''s harvesting etiquette at https://ora.ox.ac.uk/api
-
-    before automating against it — the operator asks large-scale harvesters to make contact
-
-    first and reserves the right to block unexpected scraping.
-
-    '
+    (ORA) returns from its public object endpoints.'
   contact:
     name: ORA — Bodleian Libraries, University of Oxford
     email: ora-dev@bodleian.ox.ac.uk
@@ -176,31 +147,6 @@ paths:
                 type: string
 components:
   schemas:
-    Pages:
-      type: object
-      properties:
-        current_page:
-          type: integer
-        next_page:
-          type:
-          - integer
-          - 'null'
-        prev_page:
-          type:
-          - integer
-          - 'null'
-        total_pages:
-          type: integer
-        limit_value:
-          type: integer
-        offset_value:
-          type: integer
-        total_count:
-          type: integer
-        first_page?:
-          type: boolean
-        last_page?:
-          type: boolean
     Included:
       type: object
       description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
@@ -228,6 +174,86 @@ components:
             self:
               type: string
               format: uri
+    DocumentValue:
+      type: object
+      description: The envelope ORA wraps every metadata attribute in.
+      properties:
+        id:
+          type: string
+          description: Fragment URI identifying the attribute on the record.
+        type:
+          type: string
+          const: document_value
+        attributes:
+          type: object
+          properties:
+            value:
+              type: array
+              items:
+                type: string
+            label:
+              type: string
+              description: Human-facing label for the attribute.
+          required:
+          - value
+      required:
+      - attributes
+    FacetItem:
+      type: object
+      properties:
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            value:
+              type: string
+            hits:
+              type: integer
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+    ObjectResponse:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+        data:
+          $ref: '#/components/schemas/Record'
+      required:
+      - data
+    Pages:
+      type: object
+      properties:
+        current_page:
+          type: integer
+        next_page:
+          type:
+          - integer
+          - 'null'
+        prev_page:
+          type:
+          - integer
+          - 'null'
+        total_pages:
+          type: integer
+        limit_value:
+          type: integer
+        offset_value:
+          type: integer
+        total_count:
+          type: integer
+        first_page?:
+          type: boolean
+        last_page?:
+          type: boolean
     Record:
       type: object
       properties:
@@ -256,24 +282,6 @@ components:
       required:
       - id
       - attributes
-    FacetItem:
-      type: object
-      properties:
-        attributes:
-          type: object
-          properties:
-            label:
-              type: string
-            value:
-              type: string
-            hits:
-              type: integer
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
     SearchResponse:
       type: object
       properties:
@@ -308,41 +316,4 @@ components:
       required:
       - links
       - meta
-      - data
-    DocumentValue:
-      type: object
-      description: The envelope ORA wraps every metadata attribute in.
-      properties:
-        id:
-          type: string
-          description: Fragment URI identifying the attribute on the record.
-        type:
-          type: string
-          const: document_value
-        attributes:
-          type: object
-          properties:
-            value:
-              type: array
-              items:
-                type: string
-            label:
-              type: string
-              description: Human-facing label for the attribute.
-          required:
-          - value
-      required:
-      - attributes
-    ObjectResponse:
-      type: object
-      properties:
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
-        data:
-          $ref: '#/components/schemas/Record'
-      required:
       - data

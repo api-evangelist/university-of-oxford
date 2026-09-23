@@ -3,7 +3,9 @@ info:
   title: Digital Bodleian IIIF API
   version: '2026-08-19'
   summary: IIIF Image API 2.1 (level 2), Presentation API 2.1 and Change Discovery API 1.0 for the Bodleian Libraries and Oxford college libraries.
-  description: "The strongest institution-operated API surface in Oxford's estate, and one no vendor is\ninvolved in. iiif.bodleian.ox.ac.uk resolves to digital92-prd-public.bodleian.ox.ac.uk on\n129.67.247.151 — the University of Oxford's own address space — and serves three\nconformant IIIF specifications:\n\n  * Image API 2.1 at level 2, advertising jpg/png/tif/webp/avif, native/color/gray/bitonal,\n    regionByPct, regionSquare, sizeByConfinedWh, sizeByForcedWh, sizeByWh, sizeAboveFull,\n    rotationBy90s and mirroring, with maxWidth/maxHeight of 4000 and a physical-dimensions\n    service annex.\n  * Presentation API 2.1 manifests for every Digital Bodleian object, with per-object\n    attribution and rights statements that vary by holding institution (many Oxford\n    colleges publish through this shared infrastructure).\n  * Change Discovery API 1.0 — an OrderedCollection ActivityStream reporting 21,843 items\n    across 219 pages at the time of probing. This is a genuine event surface: a harvester\n    can synchronise incrementally rather than re-crawl.\n\nThe service root itself is machine-readable: GET https://iiif.bodleian.ox.ac.uk/ returns a\ndiscovery document listing the top-level collection, the all-manifests collection and the\nactivity stream.\n\nDERIVED, not published: Oxford explains IIIF in prose at https://digital.bodleian.ox.ac.uk/faq/\nbut publishes no OpenAPI. This document was derived from live responses captured\n2026-08-19 and stored verbatim in ../examples/. The normative contracts are the IIIF\nspecifications themselves.\n"
+  description: 'The strongest institution-operated API surface in Oxford''s estate, and one no vendor is
+
+    involved in.'
   contact:
     name: Digital Bodleian — Bodleian Libraries, University of Oxford
     url: https://digital.bodleian.ox.ac.uk/help/

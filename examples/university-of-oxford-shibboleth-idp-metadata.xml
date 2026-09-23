@@ -1,0 +1,53 @@
+<!--
+ This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+This metadata is not dynamic - it will not change as your configuration changes.
+On Demand Metadata Generation available from the metadatagen plugin.
+-->
+<md:EntityDescriptor entityID="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/shibboleth" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:Extensions>
+            <shibmd:Scope regexp="false">shibboleth-prod-idp-02.it.ox.ac.uk</shibmd:Scope>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">A name for the IdP at shibboleth-prod-idp-02.it.ox.ac.uk</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Enter a description for the IdP at shibboleth-prod-idp-02.it.ox.ac.uk</mdui:Description>
+                <mdui:Logo xml:lang="en" width="80" height="80">https://shibboleth-prod-idp-02.it.ox.ac.uk/path/to/logo.png</mdui:Logo>
+            </mdui:UIInfo>
+        </md:Extensions>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIEgTCCAumgAwIBAgIVAOAD3me9c8wIM86XneGaaC2h+4XoMA0GCSqGSIb3DQEBCwUAMC0xKzAp
+BgNVBAMMInNoaWJib2xldGgtcHJvZC1pZHAtMDIuaXQub3guYWMudWswHhcNMjYwNTE1MDkxMTMy
+WhcNNDYwNTE1MDkxMTMyWjAtMSswKQYDVQQDDCJzaGliYm9sZXRoLXByb2QtaWRwLTAyLml0Lm94
+LmFjLnVrMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAw/wEcqpioaoChSI5UE2mhdEv
+j+0Wy8mG5QgLK8hSaJHoY08UsFpG8JqTYNiBA+NIEcEdihOmmlJr2mOaKqlBaqbpSud3AUp1lmq/
+/anbC4v8FCR1jl6NGsBpnsO7fpviajUSXp4XB++Ih9UiA8JcrrODBOPKUlbj3byGIl7Z5XDkj9Cn
+oyW3/kAPm7OkrrN9gSkQzOrcuNKCWddhNO466upclNRsbiunNJhkc4F8IgZCB5xlcPpGye8BcCAO
+fOoR/x4PsyBM665kqFQDcS7qmJFM+Snh/S/uj5zhrrk9Jq3baSxV9H2Y3mNv2EXtPgRKVE9kz6vr
+SZiY26DGYDB/MQGpRqQ1ztpO6FNdTZ5y8PNbDfQJqXpws48cBgCK+dFXEvc3c3MNyKIKhxOLxwJf
+fByL7dJbBeawSPVPAFKtseXHxb1NhpV0T4w8QE8XNsEF8aSkfGkoV6wD2eMsNG86oi+ynYDM/NhF
+H+xtuSIPvpXCiJMcHXlqjbRXeaiS3LTZAgMBAAGjgZcwgZQwHQYDVR0OBBYEFBRRX36sPsl7h5HF
+bV+u+AiEYLvoMGgGA1UdEQRhMF+CInNoaWJib2xldGgtcHJvZC1pZHAtMDIuaXQub3guYWMudWuG
+OWh0dHBzOi8vc2hpYmJvbGV0aC1wcm9kLWlkcC0wMi5pdC5veC5hYy51ay9pZHAvc2hpYmJvbGV0
+aDAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBCwUAA4IBgQBXzzpfWrhZS545VFZ/YEB9KFF+iVCueT4P
+qBEGJgN8Eq6g/Y4G3vfS64SR4tfL3YxH0W2CmAp4peSaKlxGdl1mfnb7uLqCovvz5QzG9zhh4vlA
+s3eOb0+ZRqwG161BI1dzTTEKRpM7APOopqb3sWzsGH0RgLG1cov9VkvnJ4mKbI/YRccdUzYpLlg2
+/HRjknzIlSTw4cfgR3Xbg1gUdd3m1cR5SOsIsH2oFfqAbK/jF0/UcEDL/qPtyPeIbYW54Y/fMHvi
+KkSJRfj4uFDg3BWZ4v3S8ZjguMu7HStivh7u2a1gJfHd/VLLvM7phmYeVjHUOH7tQdKzu+bic15j
+zTLSgLJMZ/FtdYCY8BEbSSDyI0ZeUDYH7VH0+ybXKdqKn0GTls9W7Je6/vdpMM4f1N5m7Pfsni2E
+WNOnUmwQv49TQga7Ad0PAjyt2QZ/hcte5EVL4/m/2A16fVc3Vwax5K4TTG8eZyVKs1oGRfdkW89/
+EQLyOKzi9+N3LR2RmeCN6PI=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/profile/SAML2/SOAP/Redirect/SLO" />
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/profile/SAML2/POST/SLO" />
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO" />
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/profile/SAML2/Redirect/SSO" />
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/profile/SAML2/POST/SSO" />
+    </md:IDPSSODescriptor>
+
+</md:EntityDescriptor>

@@ -1,40 +1,134 @@
 name: University of Oxford
-description: University of Oxford public developer/API footprint review for APIs.json cataloging.
+description: 'University of Oxford public API footprint review for APIs.json cataloging, run under the
+  API Evangelist university pipeline: operator attribution is settled before any contract is saved.'
 url: https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/review.yml
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-08-19'
 reviews:
-  - date: '2026-06-03'
-    rating: 3
-    summary: >-
-      Oxford's historically notable Open Data Service (data.ox.ac.uk) and Mobile Oxford
-      platform — OxPoints linked data, places, courses, and vacancies via REST, SPARQL,
-      and a JavaScript API — are deprecated and no longer resolve (data.ox.ac.uk has no
-      A/AAAA record; docs.data.ox.ac.uk and api.m.ox.ac.uk are NXDOMAIN). The one clearly
-      live, documented public API is the Bodleian Libraries' ORA (Oxford University
-      Research Archive) OAI-PMH endpoint, verified returning HTTP 200 to an Identify
-      request. The ox-it and OxfordRSE GitHub organizations and the IT Services status
-      page are live. Cataloged ORA as the active public API; the legacy open-data stack
-      is documented here as decommissioned.
-    endpoints:
-      - url: https://ora.ox.ac.uk/api
-        status: 200
-        note: ORA API documentation — verified.
-      - url: https://ora.ox.ac.uk/oai2
-        status: 200
-        note: OAI-PMH 2.0 endpoint; Identify verb returned valid response.
-      - url: https://github.com/ox-it
-        status: 200
-        note: IT Services GitHub org (~298 repos).
-      - url: https://status.it.ox.ac.uk/
-        status: 200
-        note: Oxford IT Services status page.
-      - url: https://data.ox.ac.uk/
-        status: 0
-        note: Deprecated Open Data Service — domain present but no A/AAAA record; unreachable.
-      - url: https://api.m.ox.ac.uk/
-        status: 0
-        note: Mobile Oxford API — NXDOMAIN; decommissioned.
-      - url: https://docs.data.ox.ac.uk/
-        status: 0
-        note: OxPoints/REST/SPARQL docs — NXDOMAIN; decommissioned.
+- date: '2026-06-03'
+  rating: 3
+  summary: Oxford's historically notable Open Data Service (data.ox.ac.uk) and Mobile Oxford platform
+    — OxPoints linked data, places, courses, and vacancies via REST, SPARQL, and a JavaScript API — are
+    deprecated and no longer resolve (data.ox.ac.uk has no A/AAAA record; docs.data.ox.ac.uk and api.m.ox.ac.uk
+    are NXDOMAIN). The one clearly live, documented public API is the Bodleian Libraries' ORA (Oxford
+    University Research Archive) OAI-PMH endpoint, verified returning HTTP 200 to an Identify request.
+    The ox-it and OxfordRSE GitHub organizations and the IT Services status page are live. Cataloged ORA
+    as the active public API; the legacy open-data stack is documented here as decommissioned.
+  endpoints:
+  - url: https://ora.ox.ac.uk/api
+    status: 200
+    note: ORA API documentation — verified.
+  - url: https://ora.ox.ac.uk/oai2
+    status: 200
+    note: OAI-PMH 2.0 endpoint; Identify verb returned valid response.
+  - url: https://github.com/ox-it
+    status: 200
+    note: IT Services GitHub org (~298 repos).
+  - url: https://status.it.ox.ac.uk/
+    status: 200
+    note: Oxford IT Services status page.
+  - url: https://data.ox.ac.uk/
+    status: 0
+    note: Deprecated Open Data Service — domain present but no A/AAAA record; unreachable.
+  - url: https://api.m.ox.ac.uk/
+    status: 0
+    note: Mobile Oxford API — NXDOMAIN; decommissioned.
+  - url: https://docs.data.ox.ac.uk/
+    status: 0
+    note: OxPoints/REST/SPARQL docs — NXDOMAIN; decommissioned.
+- date: '2026-08-19'
+  rating: 6
+  summary: 'Re-profiled under the university pipeline, with the operator axis settled before anything
+    was saved. The June 2026 profile recorded exactly one surface — the ORA OAI-PMH endpoint — and missed
+    most of what Oxford actually operates. Six institution-operated surfaces are now confirmed on University
+    of Oxford registrable domains: the ORA OAI-PMH provider; an undocumented but live JSON search and
+    record API over ORA at /objects.json; a full Digital Bodleian IIIF stack at iiif.bodleian.ox.ac.uk
+    running Image API 2.1 level 2, Presentation API 2.1 and Change Discovery API 1.0 over a 21,843-item
+    activity stream; a second, independent OAI-PMH provider at the Oxford Text Archive; a Shibboleth SAML
+    2.0 identity provider registered in the UK Access Management Federation and eduGAIN as https://registry.shibboleth.ox.ac.uk/idp
+    alongside 35 federated service providers; and the Continuing Education WordPress REST API. Four education-regime
+    domain standards are evidenced directly in endpoint responses — OAI-PMH, DataCite (kernel 4.6, plus
+    DataCite client bl.oxdb with 40,283 DOIs), ORCID (nameIdentifierScheme="ORCID") and SAML/Shibboleth.
+    Four vendor tenancies carrying Oxford''s name are recorded as relationships and NOT credited to Oxford:
+    portal.sds.ox.ac.uk (CNAME proxy-eu-01.figshare.com, 155,787 DOIs under 10.25446/oxford), SOLO (CNAME
+    oxford.primo.exlibrisgroup.com, vid=44OXF_INST:SOLO), Canvas (CNAME universityofoxford-vanity.instructure.com)
+    and recruitment (CoreHR). One false lead was rejected on evidence: oxford.figshare.com resolves only
+    because *.figshare.com is a wildcard — a nonsense subdomain returns the identical AWS WAF challenge.
+    Oxford still publishes no machine-readable contract for anything it runs, no versioning or deprecation
+    policy, no structured error format and no API status coverage; the entire www.ox.ac.uk estate is behind
+    a Cloudflare managed challenge. All four OpenAPI documents and three JSON Schemas in this repository
+    are DERIVED by API Evangelist from live responses and marked as such.'
+  endpoints:
+  - url: https://ora.ox.ac.uk/oai2?verb=Identify
+    status: 200
+    note: OAI-PMH 2.0; origin ora4-rhel9-prd-public2.bodleian.ox.ac.uk, adminEmail ora-dev@bodleian.ox.ac.uk
+      — institution-operated.
+  - url: https://ora.ox.ac.uk/oai2?verb=ListMetadataFormats
+    status: 200
+    note: Ten metadata formats including datacite_dc (kernel 4.6), oai_openaire, three RIOXX profiles,
+      uketd_dc.
+  - url: https://ora.ox.ac.uk/objects.json?q=climate
+    status: 200
+    note: Undocumented live JSON search API, 103KB, self-describing facet/search-field/sort vocabulary.
+  - url: https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b.json
+    status: 200
+    note: Single-record JSON endpoint.
+  - url: https://iiif.bodleian.ox.ac.uk/
+    status: 200
+    note: IIIF Change Discovery service description listing collections and activity streams.
+  - url: https://iiif.bodleian.ox.ac.uk/iiif/activity/all-changes
+    status: 200
+    note: OrderedCollection, 21,843 items across 219 pages — a real incremental-sync event surface.
+  - url: https://iiif.bodleian.ox.ac.uk/iiif/image/020bcaa4-29c9-48a7-8701-e2cfaaba84d0/info.json
+    status: 200
+    note: Image API 2.1 level 2; jpg/png/tif/webp/avif; maxWidth/maxHeight 4000.
+  - url: https://ota.bodleian.ox.ac.uk/repository/oai/request?verb=Identify
+    status: 200
+    note: Second institution-operated OAI-PMH provider; self-hosted DSpace, OLAC archive description.
+  - url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+    status: 200
+    note: Live SAML 2.0 IdP metadata. Document is the Shibboleth default self-description; federation
+      registration is the authoritative entity.
+  - url: https://technical.edugain.org/api.php?action=list_entities&format=json
+    status: 200
+    note: 38 ox.ac.uk SAML entities — 3 IdPs, 35 SPs, registration authority ukfederation.org.uk.
+  - url: https://api.datacite.org/clients/bl.oxdb
+    status: 200
+    note: DataCite client "Oxford University Research Archive", 40,283 DOIs, active since 2010.
+  - url: https://lifelong-learning.ox.ac.uk/wp-json/wp/v2/
+    status: 200
+    note: Continuing Education WordPress REST API — a platform default, recorded honestly as such.
+  - url: https://portal.sds.ox.ac.uk/
+    status: 202
+    note: TENANT. AWS WAF challenge; CNAME proxy-eu-01.figshare.com. Figshare contract, Oxford data.
+  - url: https://solo.bodleian.ox.ac.uk/
+    status: 200
+    note: TENANT. CNAME oxford.primo.exlibrisgroup.com; redirects to Primo VE vid=44OXF_INST:SOLO.
+  - url: https://canvas.ox.ac.uk/api/v1/accounts
+    status: 401
+    note: TENANT. Canvas REST API live under an Oxford hostname; CNAME universityofoxford-vanity.instructure.com.
+  - url: https://www.recruit.ox.ac.uk/
+    status: 200
+    note: TENANT. Redirects off ox.ac.uk entirely to my.corehr.com/pls/uoxrecruit.
+  - url: https://nosuchuniversity-xyz.figshare.com/
+    status: 202
+    note: NEGATIVE PROBE. A nonsense subdomain returns the same 202 WAF challenge as oxford.figshare.com
+      — that host is wildcard DNS, not evidence of a tenancy.
+  - url: https://www.ox.ac.uk/
+    status: 403
+    note: Cloudflare managed challenge, cf-mitigated:challenge. LIVE and bot-mitigated, not dead.
+  - url: https://ora.ox.ac.uk/objects/opensearch.xml
+    status: 403
+    note: Cloudflare challenge on an OpenSearch descriptor Oxford links from its own API documentation.
+  - url: https://weblearn.ox.ac.uk/
+    status: 404
+    note: Former Sakai VLE, decommissioned; teaching moved to the Canvas tenancy.
+  - url: https://data.ox.ac.uk/
+    status: 0
+    note: Decommissioned Open Data Service — no A/AAAA record. Unchanged since the 2026-06-03 review.
+  - url: https://api.m.ox.ac.uk/
+    status: 0
+    note: Mobile Oxford API — NXDOMAIN.
+  - url: https://gitlab.bodleian.ox.ac.uk/
+    status: 0
+    note: Bodleian GitLab, referenced from ORA's own API page, does not resolve publicly — internal only.

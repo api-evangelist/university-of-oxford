@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet href='static/style.xsl' type='text/xsl'?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2026-08-19T21:11:41Z</responseDate><request verb="Identify">http://ota.bodleian.ox.ac.uk/repository/oai/request</request><Identify><repositoryName>Oxford Text Archive</repositoryName><baseURL>http://ota.bodleian.ox.ac.uk/repository/oai/request</baseURL><protocolVersion>2.0</protocolVersion><adminEmail>ota@bodleian.ox.ac.uk</adminEmail><earliestDatestamp>2019-07-04T09:48:49Z</earliestDatestamp><deletedRecord>transient</deletedRecord><granularity>YYYY-MM-DDThh:mm:ssZ</granularity><description>  <oai-identifier xmlns="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai-identifier http://www.openarchives.org/OAI/2.0/oai-identifier.xsd">
+      <scheme>oai</scheme>
+      <repositoryIdentifier>ota.bodleian.ox.ac.uk </repositoryIdentifier>
+      <delimiter>:</delimiter>
+      <sampleIdentifier>oai:ota.bodleian.ox.ac.uk:20.500.12024/0001</sampleIdentifier>
+   </oai-identifier>
+</description><description><olac-archive xmlns="http://www.language-archives.org/OLAC/1.1/olac-archive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="institutional" currentAsOf="2020-02-26" xsi:schemaLocation="http://www.language-archives.org/OLAC/1.1/olac-archive          http://www.language-archives.org/OLAC/1.1/olac-archive.xsd">
+      <archiveURL>http://ota.ox.ac.uk/about</archiveURL>
+      <participant name="Martin Wynne" email="ota@bodleian.ox.ac.uk" role="repository manager" />
+      <institution>Bodleian Libraries, University of Oxford</institution>
+      <institutionURL>http://www.bodleian.ox.ac.uk/</institutionURL>
+      <shortLocation>Oxford, United Kingdom</shortLocation>
+      <location>Osney Mead, Oxford, England, OX2 0EW</location>
+      <synopsis>http://www.bodleian.ox.ac.uk/</synopsis>
+      <access>${lr.desription.access}</access>
+      <archivalSubmissionPolicy>https://ota.bodleian.ox.ac.uk/repository/xmlui/page/about</archivalSubmissionPolicy>
+</olac-archive>
+</description></Identify></OAI-PMH>

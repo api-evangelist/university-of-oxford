@@ -1,0 +1,82 @@
+name: University of Oxford — probed example payloads
+description: >-
+  Verbatim responses captured from live, institution-operated University of Oxford
+  endpoints. Nothing here is synthesised: every file is what the endpoint returned to an
+  unauthenticated GET on the date below. Two files are noted as trimmed for readability and
+  say so inside the payload; every other file is byte-for-byte what came back.
+generated: '2026-08-19'
+method: probed
+source: live unauthenticated HTTP GET against the URLs listed per example
+examples:
+  - file: university-of-oxford-ora-search-response.json
+    url: https://ora.ox.ac.uk/objects.json?q=climate&per_page=3
+    status: 200
+    x-operator: institution
+    method: probed
+    note: >-
+      data[] truncated to 3 records and each facet items[] to 3 entries for readability;
+      links, meta and the search_field/sort vocabulary are verbatim.
+  - file: university-of-oxford-ora-object-response.json
+    url: https://ora.ox.ac.uk/objects/uuid:ffe1394e-cfea-4e55-a561-2b707325fd1b.json
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-ora-oai-identify.xml
+    url: https://ora.ox.ac.uk/oai2?verb=Identify
+    status: 200
+    x-operator: institution
+    method: probed
+    note: >-
+      The response echoes the origin baseURL ora4-rhel9-prd-public2.bodleian.ox.ac.uk and
+      adminEmail ora-dev@bodleian.ox.ac.uk — the evidence that ORA runs on Bodleian
+      Libraries infrastructure rather than a vendor platform.
+  - file: university-of-oxford-ora-oai-listmetadataformats.xml
+    url: https://ora.ox.ac.uk/oai2?verb=ListMetadataFormats
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-ota-oai-identify.xml
+    url: https://ota.bodleian.ox.ac.uk/repository/oai/request?verb=Identify
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-bodleian-iiif-service-description.json
+    url: https://iiif.bodleian.ox.ac.uk/
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-bodleian-iiif-collection-top.json
+    url: https://iiif.bodleian.ox.ac.uk/iiif/collection/top
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-bodleian-iiif-manifest.json
+    url: https://iiif.bodleian.ox.ac.uk/iiif/manifest/064e049b-bef1-4973-a752-d1b5d026d4a4.json
+    status: 200
+    x-operator: institution
+    method: probed
+    note: sequences[].canvases[] truncated to the first 2; all other fields verbatim.
+  - file: university-of-oxford-bodleian-iiif-image-info.json
+    url: https://iiif.bodleian.ox.ac.uk/iiif/image/020bcaa4-29c9-48a7-8701-e2cfaaba84d0/info.json
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-bodleian-iiif-activity-stream.json
+    url: https://iiif.bodleian.ox.ac.uk/iiif/activity/all-changes
+    status: 200
+    x-operator: institution
+    method: probed
+  - file: university-of-oxford-shibboleth-idp-metadata.xml
+    url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
+    status: 200
+    x-operator: institution
+    method: probed
+    note: >-
+      SAML 2.0 IdP metadata served live by an Oxford IT Services host. The document is the
+      Shibboleth IdP's built-in self-description and carries the software's default
+      placeholder DisplayName and an internal node entityID
+      (https://shibboleth-prod-idp-02.it.ox.ac.uk/idp/shibboleth), NOT the federation-
+      registered entity. The entity Oxford is actually registered under in the UK Access
+      Management Federation and eduGAIN is https://registry.shibboleth.ox.ac.uk/idp — see
+      conformance/university-of-oxford-domain-standards.yml. Kept because the live
+      endpoint is the finding; do not read the placeholder strings as institutional facts.

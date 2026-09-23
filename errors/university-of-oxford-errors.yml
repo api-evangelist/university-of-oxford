@@ -1,0 +1,69 @@
+name: University of Oxford — error semantics
+description: >-
+  Observed error behaviour across Oxford's institution-operated surfaces. The headline finding
+  is that no Oxford API returns a structured, machine-readable error body. Errors arrive as
+  HTML pages, plain-text sentences, or — in the OAI-PMH case — as a protocol-level element
+  inside an HTTP 200. A client cannot branch on a stable error code anywhere in this estate.
+generated: '2026-08-19'
+method: probed
+source: live unauthenticated HTTP probes captured 2026-08-19
+format: none
+problem_details: false
+errors:
+  - api: ORA OAI-PMH
+    status: 200
+    body: text/xml
+    detail: >-
+      OAI-PMH signals protocol errors inside a 200 response via an <error code="..."> element
+      — badVerb, badArgument, cannotDisseminateFormat, idDoesNotExist, noRecordsMatch,
+      noSetHierarchy, badResumptionToken. This IS a machine-readable error vocabulary, but it
+      comes from the OAI-PMH specification rather than from Oxford, and a client that branches
+      on HTTP status alone will read every one of them as success.
+  - api: ORA OAI-PMH
+    status: 503
+    detail: >-
+      Documented, not observed. Oxford publishes a Tuesday 07:00-09:00 UK maintenance window
+      during which the OAI-PMH service may be unavailable — one of the few operational
+      commitments anywhere in this profile.
+  - api: ORA search / object JSON
+    status: 404
+    body: text/html
+    detail: An HTML error page. No JSON error document is returned even from a .json path.
+  - api: ORA search / object JSON
+    status: 500
+    body: text/plain
+    detail: >-
+      Observed on https://ora.ox.ac.uk/search?q=climate&format=json — a 182-byte plain-text
+      body. The correct path is /objects.json; the format= parameter is not supported and
+      fails as a server error rather than a client error.
+  - api: ORA (any path)
+    status: 403
+    body: text/html
+    detail: >-
+      Cloudflare managed challenge, cf-mitigated: challenge. Observed on
+      /objects/opensearch.xml. This is edge mitigation, not an application response — the
+      service is live and the same client reaches /oai2 and /objects.json without challenge.
+  - api: Digital Bodleian IIIF
+    status: 404
+    body: text/plain
+    detail: >-
+      A single plain-English sentence, e.g. "An object of ID all.json was not found." No code,
+      no type, no structure.
+  - api: Digital Bodleian IIIF
+    status: 400
+    body: text/html
+    detail: >-
+      A bare /iiif/ path returns the fronting web server's generic "400 Bad request" HTML, not
+      a IIIF error document.
+  - api: www.ox.ac.uk (all paths)
+    status: 403
+    body: text/html
+    detail: >-
+      Every path on the main University web estate returns a Cloudflare challenge to non-browser
+      clients, with cf-mitigated: challenge and server: cloudflare. Recorded here so it is not
+      mistaken for a dead host: www.ox.ac.uk is LIVE and bot-challenged, which is why its
+      pointers in apis.yml are graded live rather than dead.
+gaps:
+  - No RFC 9457 problem+json anywhere.
+  - No error code vocabulary authored by Oxford for any surface.
+  - No retry-after signalling observed on any error response.

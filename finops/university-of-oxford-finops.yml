@@ -4,7 +4,7 @@ schema: https://www.finops.org/framework/
 provider: University of Oxford
 providerId: university-of-oxford
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-08-19'
 reconciled: false
 tags:
 - Education
@@ -12,11 +12,10 @@ tags:
 - University
 - FinOps
 - FOCUS
-description: >-
-  FinOps profile for University of Oxford. As a non-commercial higher-education institution, its
-  APIs carry no usage-based billing; there is no invoiced cost to allocate or optimize.
-  FinOps relevance is limited to the institution's own internal cloud/infrastructure
-  cost management, which is not publicly disclosed.
+description: FinOps profile for University of Oxford. As a non-commercial higher-education institution,
+  its APIs carry no usage-based billing; there is no invoiced cost to allocate or optimize. FinOps relevance
+  is limited to the institution's own internal cloud/infrastructure cost management, which is not publicly
+  disclosed.
 notes: No public usage-based API billing; University of Oxford's APIs are free/open or affiliation-gated.
 sources:
 - https://raw.githubusercontent.com/api-evangelist/university-of-oxford/refs/heads/main/apis.yml
@@ -54,3 +53,7 @@ principles:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+generated: '2026-08-19'
+method: derived
+source: Derived from the surfaces and access posture recorded in apis.yml; re-checked against live probes
+  on 2026-08-19. Oxford publishes no pricing or plan document of any kind.

@@ -1,0 +1,116 @@
+name: University of Oxford — surface vocabulary
+description: >-
+  The controlled vocabularies Oxford's own endpoints publish about themselves. Everything here
+  was read out of a live response — the ORA search service returns its own search fields, sort
+  orders and facet ids inside every result set, and the OAI-PMH endpoints return their own sets
+  and metadata formats. Nothing in this file was invented.
+generated: '2026-08-19'
+method: probed
+source: >-
+  https://ora.ox.ac.uk/objects.json (included[] block), https://ora.ox.ac.uk/oai2 ListSets and
+  ListMetadataFormats, https://iiif.bodleian.ox.ac.uk/iiif/image/{id}/info.json
+vocabularies:
+  - name: ORA search fields
+    x-operator: institution
+    source: https://ora.ox.ac.uk/objects.json included[type=search_field]
+    terms:
+      - { id: all_fields, label: All Fields }
+      - { id: title, label: Title }
+      - { id: author, label: Author }
+      - { id: keyword, label: Keyword }
+  - name: ORA sort orders
+    x-operator: institution
+    source: https://ora.ox.ac.uk/objects.json included[type=sort]
+    terms:
+      - { id: score desc, label: relevance }
+      - { id: record_publication_date desc, label: newly added }
+      - { id: record_publication_date asc, label: oldest added }
+      - { id: computed__contains_full_text desc, label: contains full text }
+  - name: ORA facets
+    x-operator: institution
+    source: https://ora.ox.ac.uk/objects.json included[type=facet]
+    detail: >-
+      Sixteen facet fields. Note how much institutional structure they expose — division,
+      department, college, research group and funder are all first-class facets, which makes
+      the repository queryable along Oxford's own organisational shape.
+    terms:
+      - f_type_of_work
+      - computed__contains_full_text
+      - f_contributors__division
+      - f_contributors__department
+      - f_contributors__college
+      - f_contributors__research_group
+      - f_subject
+      - f_language
+      - f_thesis_degree_level
+      - f_thesis_degree_name
+      - pivot_thesis_type
+      - f_funding__funder_name
+      - f_item_year
+      - f_journal_title
+      - f_contributors__name
+      - f_keyword
+  - name: ORA OAI-PMH sets
+    x-operator: institution
+    source: https://ora.ox.ac.uk/oai2?verb=ListSets
+    detail: Selective harvesting is by type of work only; there is no subject or date hierarchy.
+    terms:
+      - type_of_work:journal_article
+      - type_of_work:conference_item
+      - type_of_work:thesis
+      - type_of_work:book_section
+      - type_of_work:working_paper
+      - type_of_work:report
+      - type_of_work:book
+      - type_of_work:dataset
+      - type_of_work:internet_publication
+      - type_of_work:record
+      - type_of_work:preprint
+      - type_of_work:patent
+      - type_of_work:composition
+      - type_of_work:ephemera
+      - type_of_work:physical_object
+      - type_of_work:universaltestobject
+    notes:
+      - >-
+        `type_of_work:universaltestobject` is a test fixture left exposed in the production set
+        list. Recorded as observed, not corrected.
+  - name: ORA OAI-PMH metadata formats
+    x-operator: institution
+    source: https://ora.ox.ac.uk/oai2?verb=ListMetadataFormats
+    terms:
+      - { prefix: oai_dc, detail: OAI-PMH standard Dublin Core }
+      - { prefix: datacite_dc, detail: DataCite kernel 4.6; datasets only }
+      - { prefix: solo_dc, detail: Customised DC for Oxford's own SOLO discovery layer }
+      - { prefix: base_dc, detail: Customised DC for BASE }
+      - { prefix: oai_openaire, detail: OpenAIRE Literature Repository Guidelines v4.0 }
+      - { prefix: uketd_dc, detail: EThOS extended DC; theses only }
+      - { prefix: rioxx_terms, detail: RIOXX v2 with v3-beta deposit/publication date fields }
+      - { prefix: rioxx_terms_cc0, detail: RIOXX v2 released under CC0, abstracts omitted }
+      - { prefix: rioxx_terms_v3, detail: RIOXX v3 }
+      - { prefix: unpaywall_dc, detail: Customised DC for Unpaywall, carries file version }
+    notes:
+      - >-
+        The solo_dc format declares its schema as
+        http://ora.ox.ac.uk/oai-pmh/metadata-formats/solo_dc/to-be-written — a placeholder
+        shipped to production. Recorded as observed.
+  - name: Digital Bodleian IIIF Image API capabilities
+    x-operator: institution
+    source: https://iiif.bodleian.ox.ac.uk/iiif/image/{id}/info.json
+    terms:
+      profile: http://iiif.io/api/image/2/level2.json
+      formats: [jpg, png, tif, webp, avif]
+      qualities: [native, color, gray, bitonal]
+      supports:
+        - regionByPct
+        - regionSquare
+        - max
+        - sizeByConfinedWh
+        - sizeByForcedWh
+        - sizeByWh
+        - sizeAboveFull
+        - rotationBy90s
+        - mirroring
+      maxWidth: 4000
+      maxHeight: 4000
+      annexServices: [http://iiif.io/api/annex/services/physdim]
