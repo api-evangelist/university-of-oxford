@@ -150,27 +150,20 @@ apis:
     url: https://idp.shibboleth.ox.ac.uk/idp/shibboleth
   - type: Conformance
     url: conformance/university-of-oxford-domain-standards.yml
-- aid: university-of-oxford:conted-wp-rest
-  name: Oxford Continuing Education WordPress REST API
-  x-operator: institution
-  x-operator-evidence: lifelong-learning.ox.ac.uk is a University of Oxford registrable domain, operated
-    by the Department for Continuing Education. WordPress is self-hosted open-source software.
-  description: 'The public WordPress REST API of Oxford''s Department for Continuing Education, live and
-    anonymous on the read paths. Recorded honestly for what it is: a content-management platform default,
-    not a designed institutional API, and not a course-catalog contract. It is included because it is
-    a real, live, machine-readable surface on an Oxford-owned domain and this profile does not pad or
-    hide either way.'
-  humanURL: https://lifelong-learning.ox.ac.uk/
+- aid: university-of-oxford:lifelong-learning-ox-ac-uk-website-wordpress-rest
+  name: University of Oxford Website (WordPress REST)
+  description: 'The public WordPress REST API (wp-json) of the University of Oxford website at lifelong-learning.ox.ac.uk:
+    the route index of the site''s content management system, catalogued as one site surface rather than
+    as separate APIs.'
   baseURL: https://lifelong-learning.ox.ac.uk/wp-json
   tags:
-  - Content
-  - Continuing Education
   - WordPress
+  x-surface: platform-generated
   properties:
-  - type: APIReference
-    url: https://lifelong-learning.ox.ac.uk/wp-json/wp/v2/
-  - type: Website
-    url: https://lifelong-learning.ox.ac.uk/
+  - type: Documentation
+    url: https://lifelong-learning.ox.ac.uk/wp-json
+  x-platform: wordpress
+  x-platform-surface: rest
 - aid: university-of-oxford:sds-figshare-tenancy
   name: Sustainable Digital Scholarship research data portal (Figshare tenancy)
   x-operator: tenant
@@ -268,7 +261,7 @@ apis:
   baseURL: https://www.recruit.ox.ac.uk/
   tags:
   - Human Resources
-  - Recruitment
+  - Recruiting
   - Tenants
   - Core HR
   tags_raw:
