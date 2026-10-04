@@ -147,24 +147,34 @@ paths:
                 type: string
 components:
   schemas:
-    FacetItem:
+    Record:
       type: object
       properties:
+        id:
+          type: string
+          description: ORA record identifier, `uuid:<uuid>`.
+        type:
+          description: Present on every observed record and null on every observed record. Recorded as observed; do not depend on it.
+          type:
+          - string
+          - 'null'
         attributes:
           type: object
+          description: Metadata attributes. `title` is a plain string; every other observed attribute is a DocumentValue. The attribute set varies by record — search results carry a reduced set, the single-record endpoint the full set.
           properties:
-            label:
+            title:
               type: string
-            value:
-              type: string
-            hits:
-              type: integer
+          additionalProperties:
+            $ref: '#/components/schemas/DocumentValue'
         links:
           type: object
           properties:
             self:
               type: string
               format: uri
+      required:
+      - id
+      - attributes
     Pages:
       type: object
       properties:
@@ -190,6 +200,88 @@ components:
           type: boolean
         last_page?:
           type: boolean
+    ObjectResponse:
+      type: object
+      properties:
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+        data:
+          $ref: '#/components/schemas/Record'
+      required:
+      - data
+    FacetItem:
+      type: object
+      properties:
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            value:
+              type: string
+            hits:
+              type: integer
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
+    DocumentValue:
+      type: object
+      description: The envelope ORA wraps every metadata attribute in.
+      properties:
+        id:
+          type: string
+          description: Fragment URI identifying the attribute on the record.
+        type:
+          type: string
+          const: document_value
+        attributes:
+          type: object
+          properties:
+            value:
+              type: array
+              items:
+                type: string
+            label:
+              type: string
+              description: Human-facing label for the attribute.
+          required:
+          - value
+      required:
+      - attributes
+    Included:
+      type: object
+      description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
+      properties:
+        type:
+          type: string
+          enum:
+          - facet
+          - search_field
+          - sort
+        id:
+          type: string
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/FacetItem'
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
     SearchResponse:
       type: object
       properties:
@@ -225,95 +317,3 @@ components:
       - links
       - meta
       - data
-    Record:
-      type: object
-      properties:
-        id:
-          type: string
-          description: ORA record identifier, `uuid:<uuid>`.
-        type:
-          description: Present on every observed record and null on every observed record. Recorded as observed; do not depend on it.
-          type:
-          - string
-          - 'null'
-        attributes:
-          type: object
-          description: Metadata attributes. `title` is a plain string; every other observed attribute is a DocumentValue. The attribute set varies by record — search results carry a reduced set, the single-record endpoint the full set.
-          properties:
-            title:
-              type: string
-          additionalProperties:
-            $ref: '#/components/schemas/DocumentValue'
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
-      required:
-      - id
-      - attributes
-    ObjectResponse:
-      type: object
-      properties:
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
-        data:
-          $ref: '#/components/schemas/Record'
-      required:
-      - data
-    Included:
-      type: object
-      description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
-      properties:
-        type:
-          type: string
-          enum:
-          - facet
-          - search_field
-          - sort
-        id:
-          type: string
-        attributes:
-          type: object
-          properties:
-            label:
-              type: string
-            items:
-              type: array
-              items:
-                $ref: '#/components/schemas/FacetItem'
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
-    DocumentValue:
-      type: object
-      description: The envelope ORA wraps every metadata attribute in.
-      properties:
-        id:
-          type: string
-          description: Fragment URI identifying the attribute on the record.
-        type:
-          type: string
-          const: document_value
-        attributes:
-          type: object
-          properties:
-            value:
-              type: array
-              items:
-                type: string
-            label:
-              type: string
-              description: Human-facing label for the attribute.
-          required:
-          - value
-      required:
-      - attributes
