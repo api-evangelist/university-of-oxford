@@ -67,7 +67,7 @@ tags:
 - Open Access
 - Research Computing
 created: '2026-06-03'
-modified: '2026-09-16'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 x-coverage:
   state: covered
@@ -333,6 +333,8 @@ apis:
   - type: Website
     url: https://ota.bodleian.ox.ac.uk/repository/xmlui/
 common:
+- url: https://www.ox.ac.uk/news
+  type: Blog
 - type: Website
   url: https://www.ox.ac.uk/
 - type: Documentation
