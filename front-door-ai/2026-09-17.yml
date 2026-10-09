@@ -4,26 +4,21 @@
 front_door_ai:
   slug: university-of-oxford
   lexicon_version: '1.0'
-  probed_at: '2026-09-17'
-  host: lifelong-learning.ox.ac.uk
-  final_host: lifelong-learning.ox.ac.uk
+  probed_at: '2026-09-25'
+  host: portal.sds.ox.ac.uk
+  final_host: null
   ownership: own
   owner: university-of-oxford
   shares_host_with: null
   inherited_from: null
-  verdict: scored
-  score: 14
-  host_score: 14
-  density: 5.46
-  words: 2563
-  tiers:
-    agentic: 0
-    core: 14
-    model: 0
-  ambiguous: 6
-  top_terms:
-    AI: 7
-    artificial intelligence: 4
-    intelligence: 4
-    machine learning: 3
-    cognitive: 2
+  alias_of: null
+  verdict: unmeasured
+  score: null
+  band: null
+  band_label: null
+  host_score: null
+  density: null
+  words: null
+  tiers: null
+  ambiguous: null
+  top_terms: null
