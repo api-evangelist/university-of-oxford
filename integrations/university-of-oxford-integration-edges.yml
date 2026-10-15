@@ -1,0 +1,232 @@
+edges:
+- partner_name: eduGAIN
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: network-participant
+  direction: partner-built
+  evidence: https://technical.edugain.org/api.php?action=list_entities&type=idp&format=json
+  category: research and education identity federation
+  contract_reference:
+    network: eduGAIN (GÉANT interfederation)
+    spec_file: null
+    roles:
+    - identity-provider
+    - service-provider
+    role: identity-and-service-provider
+    federations:
+    - UK-FEDERATION
+    matched_by: domain+name-among-holders:ox.ac.uk
+    entities:
+    - entity_id: https://registry.shibboleth.ox.ac.uk/idp
+      role: identity-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: false
+    - entity_id: https://applications.asc.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://bns.worc.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://build-short.conted.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://cellxgene.kennedy.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://childcare.uas.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://cloudpath.bnc.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://cloudpath.exeter.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://cloudpath.st-hildas.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://drupal-pilot-web-01.it.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://drupal-pilot-web-02.it.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://eap-prd-bp.it.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://examiners.admin.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://fas.sjc.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://internal.stats.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://lincbattels.linc.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://meals.keble.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://mobile.it.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://open.oxcin.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://oxclic.history.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://shiny.combat.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://sp.ota.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://sp.strubi.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://ssp.kennedy.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://web.oriel.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://www.oriel.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://www.stats.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://wytham-genome.zoo.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    - entity_id: https://zoo-seeg02.zoo.ox.ac.uk/shibboleth
+      role: service-provider
+      federation: UK-FEDERATION
+      display_name: University of Oxford
+      entity_categories: null
+      sirtfi: false
+      coco: true
+    detected_by: sweep-higher-ed.py
+    detected: '2026-10-15'
+  detected_by: sweep-higher-ed.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+checked:
+- https://technical.edugain.org/api.php?action=list_entities&type=idp&format=json
+- https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
