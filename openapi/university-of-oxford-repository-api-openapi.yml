@@ -175,31 +175,33 @@ components:
       required:
       - id
       - attributes
-    Pages:
+    Included:
       type: object
+      description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
       properties:
-        current_page:
-          type: integer
-        next_page:
-          type:
-          - integer
-          - 'null'
-        prev_page:
-          type:
-          - integer
-          - 'null'
-        total_pages:
-          type: integer
-        limit_value:
-          type: integer
-        offset_value:
-          type: integer
-        total_count:
-          type: integer
-        first_page?:
-          type: boolean
-        last_page?:
-          type: boolean
+        type:
+          type: string
+          enum:
+          - facet
+          - search_field
+          - sort
+        id:
+          type: string
+        attributes:
+          type: object
+          properties:
+            label:
+              type: string
+            items:
+              type: array
+              items:
+                $ref: '#/components/schemas/FacetItem'
+        links:
+          type: object
+          properties:
+            self:
+              type: string
+              format: uri
     ObjectResponse:
       type: object
       properties:
@@ -231,6 +233,31 @@ components:
             self:
               type: string
               format: uri
+    Pages:
+      type: object
+      properties:
+        current_page:
+          type: integer
+        next_page:
+          type:
+          - integer
+          - 'null'
+        prev_page:
+          type:
+          - integer
+          - 'null'
+        total_pages:
+          type: integer
+        limit_value:
+          type: integer
+        offset_value:
+          type: integer
+        total_count:
+          type: integer
+        first_page?:
+          type: boolean
+        last_page?:
+          type: boolean
     DocumentValue:
       type: object
       description: The envelope ORA wraps every metadata attribute in.
@@ -255,33 +282,6 @@ components:
           - value
       required:
       - attributes
-    Included:
-      type: object
-      description: Self-describing vocabulary the service returns alongside results — facets, the available search fields and the available sort orders.
-      properties:
-        type:
-          type: string
-          enum:
-          - facet
-          - search_field
-          - sort
-        id:
-          type: string
-        attributes:
-          type: object
-          properties:
-            label:
-              type: string
-            items:
-              type: array
-              items:
-                $ref: '#/components/schemas/FacetItem'
-        links:
-          type: object
-          properties:
-            self:
-              type: string
-              format: uri
     SearchResponse:
       type: object
       properties:
