@@ -232,7 +232,7 @@ apis:
   humanURL: https://canvas.ox.ac.uk/doc/api/
   baseURL: https://canvas.ox.ac.uk/api/v1/accounts
   tags:
-  - Learning Management
+  - LMS
   - Tenants
   - Canvas
   tags_raw:
